@@ -9,6 +9,7 @@ export let canStatUpgrade = (planet, stat) => {
   if (!planet) {
     return false;
   }
+  
   // [defenseCan, rangeCan, speedCan]
   let canUpgrade = planet.upgradeState.map((level, i) => {
     if (
