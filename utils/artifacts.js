@@ -80,13 +80,14 @@ export let canHaveArtifact = (planet) => {
 export let canFindArtifact = (planet) => energy(planet) >= 96;
 //export let hasArtifact = (planet) => planet.heldArtifactId != null;
 
-export let hasArtifact = (planet) => planet.heldArtifactIds.length !== 0;
+export let hasArtifact = (planet) => planet.heldArtifactIds.length != 0;
 
 export let countPlanetArtifactRarity = (planet, artifactRarity) => {
   let count = 0;
   const heldArtifactIds = planet.heldArtifactIds;
   if (heldArtifactIds) {
-    for (let [index, artifact] of heldArtifactIds.entries()) {
+    for (let id of heldArtifactIds) {
+      const artifact = df.entityStore.getArtifactById(id)
       artifact.rarity == artifactRarity ? count +=1 : null
     }
   }
