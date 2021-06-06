@@ -1,3 +1,27 @@
+/** 
+ * example stepObj:
+    const minSilver: StepObj = {
+      name: this.minSilver.name,
+      innerText: 'Test stepper',
+      min: '0',
+      max: '100000',
+      step: '10000',
+      getValueLabel: (value: number) => { return `${value/1000}k` },
+      uiType: 'stepper'
+    };
+ */
+
+/** 
+ * example dropObj:
+    const minPlanetLevel: DropObj = {
+      name: this.minPlanetLevel.name,
+      innerText: 'Test dropdown',
+      size: 10,
+      getValueLabel: (value: number) => { return `Level ${value}` },
+      uiType: 'dropdown'
+    };
+ */
+
 export const buildStepper = (stepObj, classObj) => {
     const name = stepObj.name;
     const getValueLabel = stepObj.getValueLabel;
@@ -27,6 +51,7 @@ export const buildStepper = (stepObj, classObj) => {
     };
     return [stepperLabel, stepper, stepperValue];
 };
+
 // Returns an array: [levelLabel, level]
 // Need to pass class instance in order to update variables.
 // Append to the DOM in given order.
@@ -71,6 +96,8 @@ export const appendListToDom = (container, eltList) => {
     }
 };
 
+// In plugin constructor, call: buildUi(container, inputs, this);
+// where inputs is the list of type stepObj or dropObj and *this* is the plugin class
 export const buildUi = (container, objList, classObj) => {
     let elements = [];
     for (const obj of objList) {
