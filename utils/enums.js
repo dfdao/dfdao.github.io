@@ -44,7 +44,7 @@ export let ArtifactNames = [
         "Planetary Shield",
         "Photoid Cannon",
         "Bloom Filter",
-        "Black Domain"
+        "Black Domain",
     ];
 
 export let ArtifactRarity = {
@@ -61,7 +61,7 @@ export let ArtifactRarity = {
         "Legendary": 4,
         "Mythic": 5,
         "MIN": 1,
-        "MAX": 5
+        "MAX": 5,
 };
 export let ArtifactType = {
         "0": "Unknown",
@@ -85,5 +85,5 @@ export let ArtifactType = {
         "BloomFilter": 8,
         "BlackDomain": 9,
         "MIN": 1,
-        "MAX": 9
+        "MAX": 9,
 };
