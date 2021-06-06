@@ -23,7 +23,7 @@ export let canHaveArtifact = (planet) => {
 export let canFindArtifact = (planet) => energy(planet) >= 96;
 //export let hasArtifact = (planet) => planet.heldArtifactId != null;
 
-let hasArtifact = (planet) => { return planet.heldArtifactIds.length != 0 };
+export let hasArtifact = (planet) => { return planet.heldArtifactIds.length != 0 };
 
 
 export let countPlanetArtifactRarity = (planet, artifactRarity) => {

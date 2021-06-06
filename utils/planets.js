@@ -1,4 +1,5 @@
-export let emptyAddress = "0x0000000000000000000000000000000000000000";
+// export let emptyAddress = "0x0000000000000000000000000000000000000000";
+// Testing only functions
 
 export let isUnowned = (planet) => planet.owner === emptyAddress;
 

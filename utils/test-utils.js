@@ -3,7 +3,7 @@
 
 // console.log(u)
 
-import { ArtifactRarity } from './enums.js';
+import * as test from 'https://dfdao.github.io/utils/artifacts.js';
 
 
-console.log(ArtifactRarity)
+console.log(test)
