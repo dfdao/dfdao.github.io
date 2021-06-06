@@ -2,4 +2,4 @@
 
 import * as uiElts from './ui.js';
 
-export default uiElts;
+export let uiElts;
