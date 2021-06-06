@@ -1,5 +1,7 @@
-// Contains all of the utilites
+// Wrapper that contains all of the utilites in one export
 
-import * as uiElts from './ui.js';
+// This names each export group
+// export * as uiElts from './ui.js';
 
-export let uiElts;
+// whereas this puts all the modules in one variable
+export * from './ui.js';
