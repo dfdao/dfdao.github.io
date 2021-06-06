@@ -2,7 +2,7 @@ import {
   canHaveArtifact,
   hasArtifact,
   countPlanetArtifactRarity,
-} from 'https://plugins.zkga.me/utils/utils.js';
+} from 'https://dfdao.github.io/artifacts.js';
 
 import { ArtifactRarity } from 'https://dfdao.github.io/utils/enums.js';
 
@@ -21,4 +21,6 @@ const countArtifacts = (artifactRarity) => {
 	    })
 	return count;
 }
+
+
 
