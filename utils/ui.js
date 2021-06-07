@@ -1,25 +1,34 @@
 /** 
- * example stepObj:
-    const minSilver: StepObj = {
-      name: this.minSilver.name,
-      innerText: 'Test stepper',
-      min: '0',
-      max: '100000',
-      step: '10000',
-      getValueLabel: (value: number) => { return `${value/1000}k` },
-      uiType: 'stepper'
-    };
- */
+     EXAMPLE:
 
-/** 
- * example dropObj:
-    const minPlanetLevel: DropObj = {
-      name: this.minPlanetLevel.name,
-      innerText: 'Test dropdown',
-      size: 10,
-      getValueLabel: (value: number) => { return `Level ${value}` },
-      uiType: 'dropdown'
-    };
+    constructor() {
+        this.minSilver = { name: 'minSilver', value: 20000 };
+        this.minPlanetLevel = { name: 'minPlanetLevel', value: 3 };
+    }
+
+    async render(container) {
+        let inputs = [];
+        // Create a stepper
+        const minSilver = {
+            name: this.minSilver.name,
+            innerText: 'Test stepper',
+            min: '0',
+            max: '100000',
+            step: '10000',
+            getValueLabel: (value) => { return `${value / 1000}k`; },
+            uiType: 'stepper'
+        };
+        const minPlanetLevel = {
+            name: this.minPlanetLevel.name,
+            innerText: 'Test dropdown',
+            size: 10,
+            getValueLabel: (value) => { return `Level ${value}`; },
+            uiType: 'dropdown'
+        };
+        inputs.push(minSilver);
+        inputs.push(minPlanetLevel);
+        buildUi(container, inputs, this);
+    }
  */
 
 export const buildStepper = (stepObj, classObj) => {
