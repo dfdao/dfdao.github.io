@@ -1,4 +1,5 @@
-/** 
+/**
+  TODO: Add button
      EXAMPLE:
 
     constructor() {
@@ -93,6 +94,34 @@ export const buildDropdown = (dropObj, classObj) => {
     return [levelLabel, level];
 };
 
+const buildCheckbox = (checkObj, classObj) => {
+    const getValueLabel = checkObj.getValueLabel;
+    const name = checkObj['name'];
+    const options = checkObj['options'];
+    let checkLabel = document.createElement('label')
+    checkLabel.innerText = checkobj.innerText;
+    let checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = 'checkbox';
+    checkbox.name = name;
+    checkbox.value = name;
+    options.forEach(o => {
+      let label = document.createElement('label')
+      label.htmlFor = o;
+      label.appendChild(document.createTextNode(o))
+      checkbox.appendChild(label)
+    })
+
+    checkbox.addEventListener('change', (evt) => {
+      if (evt.currentTarget.checked) {
+        console.log(`${evt.currentTarget} checked`);
+        var checkedBoxes = document.querySelectorAll(`input[name=${name}]:checked`);
+      }
+    })
+
+  return [checkLabel, checkbox]
+};
+
 // appends elements to the DOM from list.
 export const appendListToDom = (container, eltList) => {
     try {
@@ -117,6 +146,8 @@ export const buildUi = (container, objList, classObj) => {
             case 'stepper':
                 elements.push(buildStepper(obj, classObj));
                 break;
+            case 'checkbox':
+              elements.push(buildCheckbox(obj,classObj))
             default:
                 break;
         }
