@@ -1,5 +1,7 @@
+import { QuadrantType } from './enums.js'
+
 export const emptyAddress = "0x0000000000000000000000000000000000000000";
-// Testing only functions
+// Only functions work
 export let isUnowned = (planet) => planet.owner === emptyAddress;
 export let isMine = (planet) => planet.owner === df.account;
 export let getPlanetRank = (planet) => {
@@ -35,3 +37,30 @@ export let energyPercent = (planet) => {
     return Math.floor(planet.energy / planet.energyCap * 100);
 };
 export let isAsteroid = (planet) => planet.planetResource === 1;
+
+// Returns the energyPercentage (out of 1000) of the planet such that the remaining %
+// is minEnergyRemaining
+export let getMaxEnergyPct = (planet, minEnergyRemainingPct) => {
+  const floor = minEnergyRemainingPct * planet.energyCap;
+  const amountToSend = planet.energy > floor ? planet.energy - floor : 0;
+  return (amountToSend / planet.energyCap) * 100;
+}
+
+export let getAngleDeg = (ax,ay,bx,by) => {
+  var angleRad = Math.atan((by-ay)/(bx-ax));
+  var angleDeg = Math.floor(angleRad * 180 / Math.PI)
+  return (angleDeg > 0 ? angleDeg : 360 + angleDeg)
+}
+// Gets the degree between planet 1 and planet 2
+export let getPlanetDeg = (p1,p2) => {
+    const p1X = p1.location.coords.x
+    const p1Y = p1.location.coords.y
+    const p2X = p2.location.coords.x
+    const p2Y = p2.location.coords.y
+    return getAngleDeg(p1X, p1Y, p2X, p2Y)
+}
+
+export let getQuadrant = (angle) => {
+  const quadType = (Math.floor(angle / 90))
+  return QuadrantType[(quadType).toString()];
+}

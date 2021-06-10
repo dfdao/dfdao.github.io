@@ -12,6 +12,17 @@ export let BiomeNames = [
   'Lava',
 ];
 
+export let QuadrantType = {
+  "0": "NE",
+  "1": "NW",
+  "2": "SW",
+  "3": "SE",
+  "NE": "0",
+  "NW": "1",
+  "SW": "2",
+  "SE": "3",
+}
+
 export let UpgradeBranchName = {
   Defense: 0,
   Range: 1,
@@ -34,57 +45,57 @@ export let PlanetType = {
 
 export let PlanetTypeList = ['PLANET', 'ASTEROID', 'FOUNDRY', 'RIP', 'QUASAR'];
 
-// export let ArtifactNames = [
-//         "Unknown",
-//         "Monolith",
-//         "Colossus",
-//         "Spaceship",
-//         "Pyramid",
-//         "Wormhole",
-//         "Planetary Shield",
-//         "Photoid Cannon",
-//         "Bloom Filter",
-//         "Black Domain",
-//     ];
+export let ArtifactNames = [
+        "Unknown",
+        "Monolith",
+        "Colossus",
+        "Spaceship",
+        "Pyramid",
+        "Wormhole",
+        "Planetary Shield",
+        "Photoid Cannon",
+        "Bloom Filter",
+        "Black Domain",
+    ];
 
-// export let ArtifactRarity = {
-//         "0": "Unknown",
-//         "1": "MIN",
-//         "2": "Rare",
-//         "3": "Epic",
-//         "4": "Legendary",
-//         "5": "MAX",
-//         "Unknown": 0,
-//         "Common": 1,
-//         "Rare": 2,
-//         "Epic": 3,
-//         "Legendary": 4,
-//         "Mythic": 5,
-//         "MIN": 1,
-//         "MAX": 5,
-// };
+export let ArtifactRarity = {
+        "0": "Unknown",
+        "1": "MIN",
+        "2": "Rare",
+        "3": "Epic",
+        "4": "Legendary",
+        "5": "MAX",
+        "Unknown": 0,
+        "Common": 1,
+        "Rare": 2,
+        "Epic": 3,
+        "Legendary": 4,
+        "Mythic": 5,
+        "MIN": 1,
+        "MAX": 5,
+};
 
-// export let ArtifactType = {
-//         "0": "Unknown",
-//         "1": "MIN",
-//         "2": "Colossus",
-//         "3": "Spaceship",
-//         "4": "Pyramid",
-//         "5": "Wormhole",
-//         "6": "PlanetaryShield",
-//         "7": "PhotoidCannon",
-//         "8": "BloomFilter",
-//         "9": "MAX",
-//         "Unknown": 0,
-//         "Monolith": 1,
-//         "Colossus": 2,
-//         "Spaceship": 3,
-//         "Pyramid": 4,
-//         "Wormhole": 5,
-//         "PlanetaryShield": 6,
-//         "PhotoidCannon": 7,
-//         "BloomFilter": 8,
-//         "BlackDomain": 9,
-//         "MIN": 1,
-//         "MAX": 9,
-// };
+export let ArtifactType = {
+        "0": "Unknown",
+        "1": "MIN",
+        "2": "Colossus",
+        "3": "Spaceship",
+        "4": "Pyramid",
+        "5": "Wormhole",
+        "6": "PlanetaryShield",
+        "7": "PhotoidCannon",
+        "8": "BloomFilter",
+        "9": "MAX",
+        "Unknown": 0,
+        "Monolith": 1,
+        "Colossus": 2,
+        "Spaceship": 3,
+        "Pyramid": 4,
+        "Wormhole": 5,
+        "PlanetaryShield": 6,
+        "PhotoidCannon": 7,
+        "BloomFilter": 8,
+        "BlackDomain": 9,
+        "MIN": 1,
+        "MAX": 9,
+};
