@@ -94,7 +94,7 @@ export const buildDropdown = (dropObj, classObj) => {
     return [levelLabel, level];
 };
 
-const buildCheckbox = (checkObj, classObj) => {
+export const buildCheckbox = (checkObj, classObj) => {
     const getValueLabel = checkObj.getValueLabel;
     const name = checkObj['name'];
     const options = checkObj['options'];
