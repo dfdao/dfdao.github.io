@@ -94,33 +94,49 @@ export const buildDropdown = (dropObj, classObj) => {
     return [levelLabel, level];
 };
 
-export const buildCheckbox = (checkObj, classObj) => {
-    const getValueLabel = checkObj.getValueLabel;
-    const name = checkObj['name'];
-    const options = checkObj['options'];
-    let checkLabel = document.createElement('label')
-    checkLabel.innerText = checkobj.innerText;
-    let checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.id = 'checkbox';
-    checkbox.name = name;
-    checkbox.value = name;
-    options.forEach(o => {
-      let label = document.createElement('label')
-      label.htmlFor = o;
-      label.appendChild(document.createTextNode(o))
-      checkbox.appendChild(label)
-    })
+const getValues = (div) => {
+    var boxes = div.getElementsByTagName('input')
+    var vals = [];
+    for(let b of boxes){
+      b.checked ? vals.push(b.value) : null ;
+    }
+    return vals;
+}
+const buildCheckbox = (value, checked, onClick) => {
+    var checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
+    checkbox.onclick = onClick;
+    checkbox.id = value;
+    checkbox.value = value;
+    checked ? checkbox.checked = true : null
+    return checkbox;
+}
 
-    checkbox.addEventListener('change', (evt) => {
-      if (evt.currentTarget.checked) {
-        console.log(`${evt.currentTarget} checked`);
-        var checkedBoxes = document.querySelectorAll(`input[name=${name}]:checked`);
-      }
-    })
+const buildCheckboxes = (checkObj, classObj) => {
+  const name = checkObj.name;
+  const isInDefault = (option, defaults) => { return defaults.includes(option)}
+  const checkbox = document.createElement('div')
+  let checkboxLabel = document.createElement('label')
+  const onClick = (evt) => {
+    classObj[name]['value'] = getValues(checkbox)
+    console.log(`new val ${classObj[name]['value']}`)
+  }
 
-  return [checkLabel, checkbox]
-};
+  checkboxLabel.innerText = checkObj.innerText;
+  const options = checkObj['options'];
+  const defaultOptions = checkObj['defaultOptions'];
+  options.forEach(o => {
+    var label = document.createElement('label');
+    var br = document.createElement('br');
+    const checked = isInDefault(o, defaultOptions)
+    label.appendChild(buildCheckbox(o, checked, onClick))
+    label.appendChild(document.createTextNode(o))
+    label.appendChild(br)
+    checkbox.appendChild(label)
+  });
+
+  return [checkboxLabel, checkbox]
+}
 
 // appends elements to the DOM from list.
 export const appendListToDom = (container, eltList) => {
@@ -147,7 +163,7 @@ export const buildUi = (container, objList, classObj) => {
                 elements.push(buildStepper(obj, classObj));
                 break;
             case 'checkbox':
-              elements.push(buildCheckbox(obj,classObj))
+              elements.push(buildCheckboxes(obj,classObj))
             default:
                 break;
         }
