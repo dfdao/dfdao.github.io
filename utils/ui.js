@@ -119,7 +119,7 @@ const buildCheckboxes = (checkObj, classObj) => {
   let checkboxLabel = document.createElement('label')
   const onClick = (evt) => {
     classObj[name]['value'] = getValues(checkbox)
-    console.log(`new val ${classObj[name]['value']}`)
+    // console.log(`new val ${classObj[name]['value']}`)
   }
 
   checkboxLabel.innerText = checkObj.innerText;
@@ -163,7 +163,8 @@ export const buildUi = (container, objList, classObj) => {
                 elements.push(buildStepper(obj, classObj));
                 break;
             case 'checkbox':
-              elements.push(buildCheckboxes(obj,classObj))
+                elements.push(buildCheckboxes(obj,classObj))
+                break;
             default:
                 break;
         }
