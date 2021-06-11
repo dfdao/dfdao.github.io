@@ -38,8 +38,8 @@ export let energyPercent = (planet) => {
 };
 export let isAsteroid = (planet) => planet.planetResource === 1;
 
-// Returns the energyPercentage (out of 1000) of the planet such that the remaining %
-// is minEnergyRemaining. minEnergyRemainingPct should be out of 100
+// Returns the energyPercentage (out of 100) of the planet such that the remaining %
+// is minEnergyRemainingPct. minEnergyRemainingPct should be out of 100
 export let getMaxEnergyPct = (planet, minEnergyRemainingPct) => {
   const floor = (minEnergyRemainingPct / 100) * planet.energyCap;
   const amountToSend = planet.energy > floor ? planet.energy - floor : 0;

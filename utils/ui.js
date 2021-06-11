@@ -138,6 +138,16 @@ const buildCheckboxes = (checkObj, classObj) => {
   return [checkboxLabel, checkbox]
 }
 
+// builds an HTML button
+const buildButton = (buttonObj, classObj) => {
+  let button = document.createElement('button');
+  button.style.width = '100%';
+  button.style.marginBottom = '10px';
+  button.innerHTML = buttonObj['innerHTML']
+  button.onclick = buttonObj['onClick']
+  return [button]
+}
+
 // appends elements to the DOM from list.
 export const appendListToDom = (container, eltList) => {
     try {
@@ -165,6 +175,8 @@ export const buildUi = (container, objList, classObj) => {
             case 'checkbox':
                 elements.push(buildCheckboxes(obj,classObj))
                 break;
+            case 'button':
+                elements.push(buildButton(obj,classObj))
             default:
                 break;
         }
