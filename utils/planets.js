@@ -2,8 +2,15 @@ import { QuadrantType } from './enums.js'
 
 export const emptyAddress = "0x0000000000000000000000000000000000000000";
 // Only functions work
+
+export const distance = (from, to) => {
+  let fromloc = from.location;
+  let toloc = to.location;
+  return Math.sqrt((fromloc.coords.x - toloc.coords.x) ** 2 + (fromloc.coords.y - toloc.coords.y) ** 2);
+}
 export let isUnowned = (planet) => planet.owner === emptyAddress;
 export let isMine = (planet) => planet.owner === df.account;
+
 export let getPlanetRank = (planet) => {
     if (!planet)
         return 0;
@@ -40,10 +47,28 @@ export let isAsteroid = (planet) => planet.planetResource === 1;
 
 // Returns the energyPercentage (out of 100) of the planet such that the remaining %
 // is minEnergyRemainingPct. minEnergyRemainingPct should be out of 100
-export let getMaxEnergyPct = (planet, minEnergyRemainingPct) => {
-  const floor = (minEnergyRemainingPct / 100) * planet.energyCap;
+export let getMaxEnergyPct = (planet, energyRemainingPct) => {
+  const floor = (energyRemainingPct / 100) * planet.energyCap;
   const amountToSend = planet.energy > floor ? planet.energy - floor : 0;
   return (amountToSend / planet.energyCap) * 100;
+}
+
+// Gets amount of a energy a planet can spend. minEnergyRemainingPct is a number between 1 and 100.
+export let calcEnergyBudget = (planet, energyRemainingPct) => {
+  const percentToSpend = getMaxEnergyPct(planet, energyRemainingPct);
+  return Math.floor(planet.energy * (percentToSpend / 100))
+}
+
+
+
+// Ignore the planet if current planet has pending outbound moves
+export const noOutgoingMoves = (planet) => {
+  const unconfirmed = df.getUnconfirmedMoves().filter(move => move.from === planet.locationId);
+  if (unconfirmed.length !== 0) {
+    df.terminal.current.println(`${name} has pending moves. Ignoring... `)
+  }
+  // Returns true if planet has no Outgoing Moves.
+  return unconfirmed.length == 0;
 }
 
 export let getAngleDeg = (ax,ay,bx,by) => {
@@ -63,4 +88,37 @@ export let getPlanetDeg = (p1,p2) => {
 export let getQuadrant = (angle) => {
   const quadType = (Math.floor(angle / 90))
   return QuadrantType[(quadType).toString()];
+}
+
+
+
+const calcNearBig = (candidate, planet)=> {
+	// Score = candidate level * % of energy that planet can add to candidate
+	let amountArriving = // amount planet will send to candidate
+	// check to prevent planet overload
+	let currEnergyPercent = candidate.energy / candidate.energyCap
+	let newEnergyPercent = min((candidate.energy + amountArriving), candidate.energyCap) / candidate.energyCap
+	let percentToContribute = newEnergypercent - currEnergyPercent
+	let score = candidate.planetLevel * percentToContribute
+	return score
+}
+
+const nearestBiggest = (planet) => {
+  const fromId = planet.locationId
+  // Need to understand planetsInRange better
+  const candidates = df.getPlanetsInRange(fromId, maxDistributeEnergyPercent)
+      .filter(c => (
+  			// redundant?
+        c.owner !== df.account &&
+        c.owner === "0x0000000000000000000000000000000000000000" &&
+        // Similar but minCaptureLevel is a function of the planet
+        c.planetLevel >= minCaptureLevel
+      ))
+      .map(c => {
+        //returns composite planet score
+  			return calcNearBig(c, planet)
+      })
+  		// sort near close ascending.
+      .sort((a, b) => b - a);
+  	return candidates[0];
 }

@@ -1,7 +1,7 @@
-export const a = 'testing '
+// export const a = 'testing ';
+//
+// export const TEMP = {'a': 'b'};
 
-export const TEMP = {'a': 'b'}
+import { buildUi } from './ui.js';
 
-// export default {
-// 	a
-// }
+let minSilver = { name: 'minSilver', value: 20000 };
