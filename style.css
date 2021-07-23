@@ -1,0 +1,74 @@
+@font-face {
+font-family: 'PlexMono';
+font-weight: 400;
+src: url("IBMPlexMono-Regular.ttf") format("truetype");
+}
+
+/* @media (prefers-color-scheme: dark) { */
+:root{
+    --colorPrimary:#fff;
+    --colorSecondary:#999;
+    --colorLine:#333;
+    --colorBackground:#000;
+}
+/* } */
+
+:root{
+    --speedFast: 300ms;
+    --speedMedium: 500ms;
+    --speedSlow: 800ms;
+    --speedInstant: 0ms;
+    --speedInstant: 0ms;
+}
+html{
+    font-size: 62.5%;
+    height: 100%;
+    background-color: var(--colorBackground);
+}
+
+body {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-family: 'PlexMono';
+    font-weight: 400;
+    color: var(--colorSecondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 24px;
+    animation: fadeInAnimation ease 1s;
+}
+h1{
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-family: 'PlexMono';
+    font-weight: 400;
+    color: var(--colorPrimary);
+    margin-bottom: 4px;
+}
+
+a:hover{
+    transition: 300ms;
+    color: var(--colorPrimary);
+}
+
+.logo{
+    margin-bottom: 16px;
+}
+
+.container{
+    max-width: 380px;
+}
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+     }
+}
