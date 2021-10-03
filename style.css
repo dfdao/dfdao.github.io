@@ -72,3 +72,37 @@ a:hover{
         transform: translateY(0px);
      }
 }
+
+.paragraph{
+    margin-bottom: 24px;
+}
+table{
+    width: 100%;
+}
+tr{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cta{
+    display: block;
+    margin-top: 4px;
+    color: orange;
+}
+
+.cta:hover{
+    color: orange;
+}
+.ctaGroup{
+    margin-top: 16px;
+}
+p{
+    margin-bottom: 8px;
+}
+
+.addressFormat{
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
