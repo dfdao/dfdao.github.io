@@ -54,7 +54,7 @@ h1{
 } */
 
 .logo{
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .container{
@@ -91,7 +91,7 @@ tr{
 }
 td:first-child{
     color: white;
-    margin-right: 12px;
+    margin-right: 8px;
 }
 
 p{
