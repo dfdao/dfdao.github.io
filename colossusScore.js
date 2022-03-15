@@ -12,5 +12,4 @@ colossus.playerCounter().then(async count => {
     const playerScore = await colossus.contributions(playerAddress);
     console.log(`addy ${playerAddress} score ${playerScore}`);
   }
-})
-
+});
