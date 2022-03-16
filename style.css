@@ -336,7 +336,7 @@
         background-image: url(images/Idealless\ Joeys.gif);
         background-size: cover;
         border-radius:100%;
-       }
+    }
     .nft3{
         position:absolute;
         width:220px;
@@ -346,7 +346,7 @@
         background-image: url(images/Aberrant\ Chief.gif);
         background-size: cover;
         border-radius:100%;
-       }
+    }
     .nft4{
         position:absolute;
         width:170px;
@@ -356,7 +356,7 @@
         background-image: url(images/Cherries\ Abandon\ Blade.gif);
         background-size: cover;
         border-radius:100%;
-       }
+    }
     .nft5{
         position:absolute;
         width:100px;
@@ -366,7 +366,7 @@
         background-image: url(images/Ring\ Rush.gif);
         background-size: cover;
         border-radius:100%;
-       }
+    }
     .nft6{
         position:absolute;
         width:170px;
@@ -376,4 +376,122 @@
         background-image: url(images/Straigth\ Birthday\ Sheet.gif);
         background-size: cover;
         border-radius:100%;
-       }
+    }
+
+    .intro-events{
+        position:absolute;
+        top:1217px;
+        left:81px;
+    }
+    
+    .events{
+        position:absolute;
+        top:1280px;
+        left:81px;
+        width: 1280px;
+        height: 640x;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .event-title{
+        position:relative;
+        top:30px;
+        font-size:15px;
+        color:white;
+        cursor:pointer;
+        user-select: none;
+    }
+    .box-remembered{
+        position:absolute;
+        width:320px;
+        height:80px;
+        border:1px solid rgba(255,255,255,0.3);
+        text-align:center;
+    }
+    .box-intergalactic-yolo{
+        position:absolute;
+        width:320px;
+        height:80px;
+        left:320px;
+        border:1px solid rgba(255,255,255,0.3);
+        text-align:center;
+    }
+    .box-astral-colossus{
+        position:absolute;
+        width:320px;
+        height:80px;
+        left:640px;
+        border: 1px solid rgba(255,255,255,0.3);
+        text-align:center;
+    }
+    .box-junk-wars{
+        position:absolute;
+        width:320px;
+        height:80px;
+        left:960px;
+        border: 1px solid rgba(255,255,255,0.3);
+        text-align:center;
+    }
+    .box-description{
+        position:absolute;
+        width:1280px;
+        height:400px;
+        top:80px;
+        border:1px solid rgba(255,255,255,0.2);
+        display:table;
+    }
+    .description-remembered{
+        position:relative;
+        width:640px;
+        height:400px;
+        right: 200px;
+        text-align:center;
+        vertical-align:middle;
+        font-size:13px;
+        display: none;
+        
+    }
+    .image-remembered{
+        position:absolute;
+        width:300px;
+        height:300px;
+        top: 50px;
+        left: 50px;
+        vertical-align:middle;
+        background-image:url(images/Remembered-TheVelorum.gif);
+        background-size:cover;
+        display: none;
+    }
+    .description-intergalactic-yolo{
+        position:relative;
+        width:640px;
+        height:400px;
+        right: 200px;
+        text-align:center;
+        vertical-align:middle;
+        font-size:13px;
+        display: none;
+        
+    }
+    .description-astral-colossus{
+        position:relative;
+        width:640px;
+        height:400px;
+        right: 200px;
+        text-align:center;
+        vertical-align:middle;
+        font-size:13px;
+        display: none;
+        
+    }
+    .description-junk-wars{
+        position:relative;
+        width:640px;
+        height:400px;
+        right: 200px;
+        text-align:center;
+        vertical-align:middle;
+        font-size:13px;
+        display: none;
+        
+    }
