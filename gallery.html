@@ -138,7 +138,7 @@
         let descriptionJunkWars = document.querySelector('.description-junk-wars');
 
         boxRemembered.addEventListener('click', () => {
-            if (imageRemembered.style.display == 'none' && descriptionRemembered.style.display == 'none') {
+            if (getComputedStyle(imageRemembered).display == 'none' && getComputedStyle(descriptionRemembered).display == 'none') {
                 imageRemembered.style.display = 'table-cell';
                 descriptionRemembered.style.display = 'table-cell';
                 imageIntergalacticYolo.style.display = 'none';
@@ -154,7 +154,7 @@
         })
 
         boxIntergalacticYolo.addEventListener('click', () => {
-            if (imageIntergalacticYolo.style.display == 'none' && descriptionIntergalacticYolo.style.display == 'none') {
+            if (getComputedStyle(imageIntergalacticYolo).display == 'none' && getComputedStyle(descriptionIntergalacticYolo).display == 'none') {
                 imageIntergalacticYolo.style.display = 'table-cell';
                 descriptionIntergalacticYolo.style.display = 'table-cell';
                 imageRemembered.style.display = 'none';
@@ -170,7 +170,7 @@
         })
 
         boxAstralColossus.addEventListener('click', () => {
-            if (imageAstralColossus.style.display == 'none' && descriptionAstralColossus.style.display == 'none') {
+            if (getComputedStyle(imageAstralColossus).display == 'none' && getComputedStyle(descriptionAstralColossus).display == 'none') {
                 imageAstralColossus.style.display = 'table-cell';
                 descriptionAstralColossus.style.display = 'table-cell';
                 imageRemembered.style.display = 'none';
@@ -186,7 +186,7 @@
         })
 
         boxJunkWars.addEventListener('click', () => {
-            if (imageJunkWars.style.display == 'none' && descriptionJunkWars.style.display == 'none') {
+            if (getComputedStyle(imageJunkWars).display == 'none' && getComputedStyle(descriptionJunkWars).display == 'none') {
                 imageJunkWars.style.display = 'table-cell';
                 descriptionJunkWars.style.display = 'table-cell';
                 imageRemembered.style.display = 'none';
