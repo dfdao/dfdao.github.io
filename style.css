@@ -349,8 +349,6 @@ p {}
     height: 120px;
     top: 100px;
     left: 100px;
-    background-image: url(images/Catch\ Cabagge\ Mountain.gif);
-    background-size: cover;
     border-radius: 100%;
 }
 
@@ -360,8 +358,6 @@ p {}
     height: 120px;
     top: 100px;
     left: 100px;
-    background-image: url(images/Idealless\ Joeys.gif);
-    background-size: cover;
     border-radius: 100%;
 }
 
@@ -371,8 +367,6 @@ p {}
     height: 220px;
     top: 50px;
     left: 50px;
-    background-image: url(images/Aberrant\ Chief.gif);
-    background-size: cover;
     border-radius: 100%;
 }
 
@@ -382,8 +376,6 @@ p {}
     height: 170px;
     top: 75px;
     left: 75px;
-    background-image: url(images/Cherries\ Abandon\ Blade.gif);
-    background-size: cover;
     border-radius: 100%;
 }
 
@@ -393,8 +385,6 @@ p {}
     height: 100px;
     top: 110px;
     left: 110px;
-    background-image: url(images/Ring\ Rush.gif);
-    background-size: cover;
     border-radius: 100%;
 }
 
@@ -404,8 +394,6 @@ p {}
     height: 170px;
     top: 75px;
     left: 75px;
-    background-image: url(images/Straigth\ Birthday\ Sheet.gif);
-    background-size: cover;
     border-radius: 100%;
 }
 
