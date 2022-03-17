@@ -185,7 +185,8 @@ td:first-child {
 /* gallery.html */
 
 .gallery-container {
-    padding: 47px 81px;
+    /* courtesy of velorum */
+    padding: 47px 12.46%;
 }
 
 .guild {
@@ -340,7 +341,6 @@ td:first-child {
     top: 80px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
-    width: 100%;
 }
 
 .box-description div {
