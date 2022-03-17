@@ -2,496 +2,532 @@
     font-family: 'PlexMono';
     font-weight: 400;
     src: url("IBMPlexMono-Regular.ttf") format("truetype");
-    }
-    
-    .green {
-        color: lawngreen;
-    
-    }
-    .pink {
-        color: hotpink;
-    }
-    .blue {
-        color: cyan;
-    }
-    
-    /* @media (prefers-color-scheme: dark) { */
-    :root{
-        --colorPrimary:#fff;
-        --colorSecondary:#999;
-        --colorLine:#333;
-        --colorBackground:#000;
-    }
-    /* } */
-    
-    :root{
-        --speedFast: 300ms;
-        --speedMedium: 500ms;
-        --speedSlow: 800ms;
-        --speedInstant: 0ms;
-        --speedInstant: 0ms;
-    }
-    html{
-        font-size: 62.5%;
-        height: 100%;
-        background-color: var(--colorBackground);
-    }
-    
-    body {
-        font-size: 1.4rem;
-        line-height: 1.4;
-        font-family: 'PlexMono';
-        font-weight: 400;
-        color: var(--colorSecondary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        padding: 0 24px;
-        animation: fadeInAnimation ease 1s;
-    }
-    h1{
-        font-size: 1.4rem;
-        line-height: 1.4;
-        font-family: 'PlexMono';
-        font-weight: 400;
-        color: var(--colorPrimary);
-        margin-bottom: 4px;
-    }
-    
-    /* a:hover{
+}
+
+.green {
+    color: lawngreen;
+}
+
+.pink {
+    color: hotpink;
+}
+
+.blue {
+    color: cyan;
+}
+
+
+/* @media (prefers-color-scheme: dark) { */
+
+ :root {
+    --colorPrimary: #fff;
+    --colorSecondary: #999;
+    --colorLine: #333;
+    --colorBackground: #000;
+}
+
+
+/* } */
+
+ :root {
+    --speedFast: 300ms;
+    --speedMedium: 500ms;
+    --speedSlow: 800ms;
+    --speedInstant: 0ms;
+    --speedInstant: 0ms;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    background-color: var(--colorBackground);
+}
+
+body {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-family: 'PlexMono';
+    font-weight: 400;
+    color: var(--colorSecondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 24px;
+    animation: fadeInAnimation ease 1s;
+}
+
+h1 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-family: 'PlexMono';
+    font-weight: 400;
+    color: var(--colorPrimary);
+    margin-bottom: 4px;
+}
+
+
+/* a:hover{
         transition: 300ms;
         color: var(--colorPrimary);
     } */
-    
-    .logo{
-        margin-bottom: 28px;
-    }
-    
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        /* width: 50%; */
-      }
-    .container{
-        position: relative;
-        max-width: 380px;
-    }
-    .menu{
-        position: relative;
-        top: 25px;
-        text-align: center;
-    }
 
-    /* button at the index.html */
+.logo {
+    margin-bottom: 28px;
+}
 
-    .fancybutton{
-        text-align: center;
-        position: relative;
-        display: inline-block;
-        text-decoration: none;
-        cursor:pointer;
-        border: white 1px solid;
-        padding: 0.25em 1em;
-        border-radius: 0.25em;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+}
 
-        box-shadow: inset 0 0 0.5em 0 rgb(255,255,255,0.5), 0 0 0.5em 0 rgb(255,255,255,0.5);
-    }
+.container {
+    position: relative;
+    max-width: 380px;
+}
 
-    .fancybutton::before{
-        pointer-events:none;
-        content: '';
-        position: absolute;
-        background: white;
-        top: 110%;
-        left:0;
-        width:100%;
-        height:100%;
-        transform: perspective(1em) rotateX(40deg) scale(1,0.25);
-        filter: blur(1.5em);
-        opacity:0.1;
-    }
+.menu {
+    position: relative;
+    top: 25px;
+    text-align: center;
+}
 
-    .fancybutton::after{
-        content: '';
-        position: relative;
-        top: 100px;
-        bottom: 0;
-        left: 0;
-        right: 0;
+
+/* button at the index.html */
+
+.fancybutton {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border: white 1px solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    box-shadow: inset 0 0 0.5em 0 rgb(255, 255, 255, 0.5), 0 0 0.5em 0 rgb(255, 255, 255, 0.5);
+}
+
+.fancybutton::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background: white;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.25);
+    filter: blur(1.5em);
+    opacity: 0.1;
+}
+
+.fancybutton::after {
+    content: '';
+    position: relative;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 200ms linear;
+}
+
+.fancybutton:hover,
+.fancybutton:focus {
+    color: white;
+    text-shadow: none;
+}
+
+.fancybutton:hover::before,
+.fancybutton:focus::before {
+    opacity: 0.3;
+}
+
+.fancybutton:hover::after,
+.fancybutton:focus::after {
+    opacity: 0.1;
+}
+
+@keyframes fadeInAnimation {
+    0% {
         opacity: 0;
-        transition: opacity 200ms linear;
+        transform: translateY(8px);
     }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 
-    .fancybutton:hover,
-    .fancybutton:focus{
-        color: white;
-        text-shadow: none;
-    }
+.paragraph {
+    margin-bottom: 24px;
+}
 
-    .fancybutton:hover::before,
-    .fancybutton:focus::before{
-        opacity: 0.3;
-    }
+table {
+    margin-top: 16px;
+    width: 100%;
+}
 
-    .fancybutton:hover::after,
-    .fancybutton:focus::after{
-        opacity: 0.1;
-    }
-    
-    @keyframes fadeInAnimation {
-        0% {
-            opacity: 0;
-            transform: translateY(8px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0px);
-         }
-    }
-    
-    .paragraph{
-        margin-bottom: 24px;
-    }
-    table{
-        margin-top: 16px;
-        width: 100%;
-    }
-    tr{
-        width: 100%;
-        display: flex;
-        /* justify-content: space-between; */
-        padding: 8px 0px;
-        /* border-top: 1px solid #1d1d1d; */
-        /* border-bottom: 1px solid #1d1d1d; */
-        margin-bottom: -1px;
-    }
-    td:first-child{
-        color: white;
-        margin-right: 8px;
-    }
-    
-    p {
-    
-    }
+tr {
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 8px 0px;
+    /* border-top: 1px solid #1d1d1d; */
+    /* border-bottom: 1px solid #1d1d1d; */
+    margin-bottom: -1px;
+}
 
-    /* gallery.html */
-    .gallery-container{
-        position:absolute;
-        width:1440px;
-        top:0px;
-    }
-    
-    .intro{
-        position: absolute;
-        height: 16px;
-        top: 47px;
-        left: 81px;
-    }
+td:first-child {
+    color: white;
+    margin-right: 8px;
+}
 
-    .guild{
-        position: absolute;
-        top:47px;
-        left: 1060px;
-        border: solid 1px white;
-        border-radius: 2%;
-        padding: 0.25em 1em;
-        cursor: pointer;
-    }
-    .architects{
-        position: absolute;
-        top: 47px;
-        left: 1193px;
-        border: solid 1px white;
-        border-radius: 2%;
-        padding: 0.25em 1em;
-        cursor: pointer;
-    }
+p {}
 
-    .header{
-        position: relative;
-        height: 294px;
-        width: 1276px;
-        top:94px;
-        left: 81px;
-        background-image: url(images/Frame\ 4.png);
-    }
 
-    .intro-nfts{
-        position: absolute;
-        top: 430px;
-        left: 81px;
+/* gallery.html */
 
-    }
-    .nfts{
-        position: absolute;
-        width: 1280px;
-        height: 639px;
-        left: 81px;
-        top: 480px;
-        border: 1px solid rgba(255,255,255,0.1)
-    }
-    .nftbox1{
-        position:absolute;
-        width:320px;
-        height:320px;
-        border: 1px solid rgba(255,255,255,0.1);
-    }
-    .nftbox2{
-        position:absolute;
-        width:320px;
-        height:320px;
-        left:320px;
-        border: 1px solid rgba(255,255,255,0.1);
-    }
-    .nftbox3{
-        position:absolute;
-        width:320px;
-        height:320px;
-        left:640px;
-        border: 1px solid rgba(255,255,255,0.1);
-    }
-    .nftbox4{
-        position:absolute;
-        width:320px;
-        height:320px;
-        left:960px;
-        border: 1px solid rgba(255,255,255,0.1);
-    }
-    .nftbox5{
-        position:absolute;
-        width:320px;
-        height:320px;
-        top:320px;
-        border: 1px solid rgba(255,255,255,0.1);
-    }
-    .nftbox6{
-        position:absolute;
-        width:320px;
-        height:320px;
-        top:320px;
-        left:320px;
-        border: 1px solid rgba(255,255,255,0.1);
-    }
-    .nftbox7{
-        position:absolute;
-        width:320px;
-        height:320px;
-        top:320px;
-        left:640px;
-        border: 1px solid rgba(255,255,255,0.1);
-    }
-    .nftbox8{
-        position:absolute;
-        width:320px;
-        height:320px;
-        top:320px;
-        left:960px;
-        border: 1px solid rgba(255,255,255,0.1);
-    }
+.gallery-container {
+    position: absolute;
+    width: 1440px;
+    top: 0px;
+}
 
-    .nft-round{
-        position:absolute;
-        top:16px;
-        left:16px;
-        font-size:12px;
-    }
-    .nft-type{
-        position:absolute;
-        top:16px;
-        right:16px;
-        font-size:12px;
-    }
-    .nft-name{
-        position:absolute;
-        bottom:16px;
-        left:16px;
-        font-size:12px;
-        color:white;
-    }
-    .nft-level{
-        position:absolute;
-        bottom:16px;
-        right:16px;
-        font-size:12px;
-    }
+.intro {
+    position: absolute;
+    height: 16px;
+    top: 47px;
+    left: 81px;
+}
 
-    .nft1{
-        position:absolute;
-        width:120px;
-         height:120px;
-        top: 100px;
-        left: 100px;
-        background-image: url(images/Catch\ Cabagge\ Mountain.gif);
-        background-size: cover;
-        border-radius:100%;
-    }
-    .nft2{
-        position:absolute;
-        width:120px;
-        height:120px;
-        top: 100px;
-        left: 100px;
-        background-image: url(images/Idealless\ Joeys.gif);
-        background-size: cover;
-        border-radius:100%;
-    }
-    .nft3{
-        position:absolute;
-        width:220px;
-        height:220px;
-        top: 50px;
-        left: 50px;
-        background-image: url(images/Aberrant\ Chief.gif);
-        background-size: cover;
-        border-radius:100%;
-    }
-    .nft4{
-        position:absolute;
-        width:170px;
-        height:170px;
-        top: 75px;
-        left: 75px;
-        background-image: url(images/Cherries\ Abandon\ Blade.gif);
-        background-size: cover;
-        border-radius:100%;
-    }
-    .nft5{
-        position:absolute;
-        width:100px;
-        height:100px;
-        top: 110px;
-        left: 110px;
-        background-image: url(images/Ring\ Rush.gif);
-        background-size: cover;
-        border-radius:100%;
-    }
-    .nft6{
-        position:absolute;
-        width:170px;
-        height:170px;
-        top: 75px;
-        left: 75px;
-        background-image: url(images/Straigth\ Birthday\ Sheet.gif);
-        background-size: cover;
-        border-radius:100%;
-    }
+.guild {
+    position: absolute;
+    top: 47px;
+    left: 1060px;
+    border: solid 1px white;
+    border-radius: 2%;
+    padding: 0.25em 1em;
+    cursor: pointer;
+}
 
-    .intro-events{
-        position:absolute;
-        top:1217px;
-        left:81px;
-    }
-    
-    .events{
-        position:absolute;
-        top:1280px;
-        left:81px;
-        width: 1280px;
-        height: 640x;
-        border: 1px solid rgba(255,255,255,0.1);
-    }
+.architects {
+    position: absolute;
+    top: 47px;
+    left: 1193px;
+    border: solid 1px white;
+    border-radius: 2%;
+    padding: 0.25em 1em;
+    cursor: pointer;
+}
 
-    .event-title{
-        position:relative;
-        top:30px;
-        font-size:15px;
-        color:white;
-        cursor:pointer;
-        user-select: none;
-    }
-    .box-remembered{
-        position:absolute;
-        width:320px;
-        height:80px;
-        border:1px solid rgba(255,255,255,0.3);
-        text-align:center;
-    }
-    .box-intergalactic-yolo{
-        position:absolute;
-        width:320px;
-        height:80px;
-        left:320px;
-        border:1px solid rgba(255,255,255,0.3);
-        text-align:center;
-    }
-    .box-astral-colossus{
-        position:absolute;
-        width:320px;
-        height:80px;
-        left:640px;
-        border: 1px solid rgba(255,255,255,0.3);
-        text-align:center;
-    }
-    .box-junk-wars{
-        position:absolute;
-        width:320px;
-        height:80px;
-        left:960px;
-        border: 1px solid rgba(255,255,255,0.3);
-        text-align:center;
-    }
-    .box-description{
-        position:absolute;
-        width:1280px;
-        height:400px;
-        top:80px;
-        border:1px solid rgba(255,255,255,0.2);
-        display:table;
-    }
-    .description-remembered{
-        position:relative;
-        width:640px;
-        height:400px;
-        right: 200px;
-        text-align:center;
-        vertical-align:middle;
-        font-size:13px;
-        display: none;
-        
-    }
-    .image-remembered{
-        position:absolute;
-        width:300px;
-        height:300px;
-        top: 50px;
-        left: 50px;
-        vertical-align:middle;
-        background-image:url(images/Remembered-TheVelorum.gif);
-        background-size:cover;
-        display: none;
-    }
-    .description-intergalactic-yolo{
-        position:relative;
-        width:640px;
-        height:400px;
-        right: 200px;
-        text-align:center;
-        vertical-align:middle;
-        font-size:13px;
-        display: none;
-        
-    }
-    .description-astral-colossus{
-        position:relative;
-        width:640px;
-        height:400px;
-        right: 200px;
-        text-align:center;
-        vertical-align:middle;
-        font-size:13px;
-        display: none;
-        
-    }
-    .description-junk-wars{
-        position:relative;
-        width:640px;
-        height:400px;
-        right: 200px;
-        text-align:center;
-        vertical-align:middle;
-        font-size:13px;
-        display: none;
-        
-    }
+.header {
+    position: relative;
+    height: 294px;
+    width: 1276px;
+    top: 94px;
+    left: 81px;
+    background-image: url(images/Frame\ 4.png);
+}
+
+.intro-nfts {
+    position: absolute;
+    top: 430px;
+    left: 81px;
+}
+
+.nfts {
+    position: absolute;
+    width: 1280px;
+    height: 639px;
+    left: 81px;
+    top: 480px;
+    border: 1px solid rgba(255, 255, 255, 0.1)
+}
+
+.nftbox1 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nftbox2 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    left: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nftbox3 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    left: 640px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nftbox4 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    left: 960px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nftbox5 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    top: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nftbox6 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    top: 320px;
+    left: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nftbox7 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    top: 320px;
+    left: 640px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nftbox8 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    top: 320px;
+    left: 960px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nft-round {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 12px;
+}
+
+.nft-type {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 12px;
+}
+
+.nft-name {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-size: 12px;
+    color: white;
+}
+
+.nft-level {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 12px;
+}
+
+.nft1 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 100px;
+    left: 100px;
+    background-image: url(images/Catch\ Cabagge\ Mountain.gif);
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.nft2 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 100px;
+    left: 100px;
+    background-image: url(images/Idealless\ Joeys.gif);
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.nft3 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    top: 50px;
+    left: 50px;
+    background-image: url(images/Aberrant\ Chief.gif);
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.nft4 {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    top: 75px;
+    left: 75px;
+    background-image: url(images/Cherries\ Abandon\ Blade.gif);
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.nft5 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 110px;
+    left: 110px;
+    background-image: url(images/Ring\ Rush.gif);
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.nft6 {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    top: 75px;
+    left: 75px;
+    background-image: url(images/Straigth\ Birthday\ Sheet.gif);
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.intro-events {
+    position: absolute;
+    top: 1217px;
+    left: 81px;
+}
+
+.events {
+    position: absolute;
+    top: 1280px;
+    left: 81px;
+    width: 1280px;
+    height: 640x;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.event-title {
+    position: relative;
+    top: 30px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.box-remembered {
+    position: absolute;
+    width: 320px;
+    height: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.box-intergalactic-yolo {
+    position: absolute;
+    width: 320px;
+    height: 80px;
+    left: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.box-astral-colossus {
+    position: absolute;
+    width: 320px;
+    height: 80px;
+    left: 640px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.box-junk-wars {
+    position: absolute;
+    width: 320px;
+    height: 80px;
+    left: 960px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.box-description {
+    position: absolute;
+    width: 1280px;
+    height: 400px;
+    top: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: table;
+}
+
+.description-remembered {
+    position: relative;
+    width: 640px;
+    height: 400px;
+    right: 200px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 13px;
+    display: none;
+}
+
+.image-remembered {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50px;
+    left: 50px;
+    vertical-align: middle;
+    background-image: url(images/Remembered-TheVelorum.gif);
+    background-size: cover;
+    display: none;
+}
+
+.description-intergalactic-yolo {
+    position: relative;
+    width: 640px;
+    height: 400px;
+    right: 200px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 13px;
+    display: none;
+}
+
+.description-astral-colossus {
+    position: relative;
+    width: 640px;
+    height: 400px;
+    right: 200px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 13px;
+    display: none;
+}
+
+.description-junk-wars {
+    position: relative;
+    width: 640px;
+    height: 400px;
+    right: 200px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 13px;
+    display: none;
+}
