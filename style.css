@@ -507,7 +507,7 @@ p {}
     background-size: cover;
     display: none;
 }
-.image-intergalactic-yolo, .image-astral-colossus,.image-junk-wars {
+.image-intergalactic-yolo, .image-astral-colossus, .image-junk-wars {
     position: absolute;
     width: 300px;
     height: 300px;
