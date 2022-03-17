@@ -421,7 +421,6 @@ p {}
     left: 81px;
     width: 1280px;
     height: 640x;
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .event-title {
@@ -437,7 +436,7 @@ p {}
     position: absolute;
     width: 320px;
     height: 80px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
 }
 
@@ -446,7 +445,7 @@ p {}
     width: 320px;
     height: 80px;
     left: 320px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
 }
 
@@ -455,7 +454,7 @@ p {}
     width: 320px;
     height: 80px;
     left: 640px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
 }
 
@@ -464,7 +463,6 @@ p {}
     width: 320px;
     height: 80px;
     left: 960px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
     text-align: center;
 }
 
@@ -473,7 +471,7 @@ p {}
     width: 1280px;
     height: 400px;
     top: 80px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     display: table;
 }
 
