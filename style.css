@@ -242,7 +242,6 @@ td:first-child {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto;
     padding: 16px;
-    align-self: center;
 }
 
 .nft-round {
@@ -279,6 +278,7 @@ td:first-child {
     border-radius: 100%;
     grid-area: 2 / span 2;
     margin: calc((8 - var(--planet-level)) * 5%);
+    align-self: center;
 }
 
 .nft1 {
