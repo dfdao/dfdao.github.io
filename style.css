@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'PlexMono';
     font-weight: 400;
-    src: url("IBMPlexMono-Regular.ttf") format("truetype");
+    src: url('IBMPlexMono-Regular.ttf') format('truetype');
 }
 
 .green {
@@ -16,10 +16,9 @@
     color: cyan;
 }
 
-
 /* @media (prefers-color-scheme: dark) { */
 
- :root {
+:root {
     --colorPrimary: #fff;
     --colorSecondary: #999;
     --colorLine: #333;
@@ -48,10 +47,9 @@
     /* Firefox */
 }
 
-
 /* } */
 
- :root {
+:root {
     --speedFast: 300ms;
     --speedMedium: 500ms;
     --speedSlow: 800ms;
@@ -74,7 +72,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    min-height: 100%;
     padding: 0 24px;
     animation: fadeInAnimation ease 1s;
 }
@@ -87,7 +85,6 @@ h1 {
     color: var(--colorPrimary);
     margin-bottom: 4px;
 }
-
 
 /* a:hover{
         transition: 300ms;
@@ -116,7 +113,6 @@ h1 {
     text-align: center;
 }
 
-
 /* button at the index.html */
 
 .fancybutton {
@@ -128,7 +124,8 @@ h1 {
     border: white 1px solid;
     padding: 0.25em 1em;
     border-radius: 0.25em;
-    box-shadow: inset 0 0 0.5em 0 rgb(255, 255, 255, 0.5), 0 0 0.5em 0 rgb(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 0.5em 0 rgb(255, 255, 255, 0.5),
+        0 0 0.5em 0 rgb(255, 255, 255, 0.5);
 }
 
 .fancybutton::before {
@@ -207,234 +204,138 @@ td:first-child {
     margin-right: 8px;
 }
 
-p {}
-
-
 /* gallery.html */
 
 .gallery-container {
-    position: absolute;
-    width: 1440px;
-    top: 0px;
-}
-
-.intro {
-    position: absolute;
-    height: 16px;
-    top: 47px;
-    left: 81px;
+    /* courtesy of velorum */
+    padding: 47px 12.46%;
+    width: 100%;
 }
 
 .guild {
-    position: absolute;
-    top: 47px;
-    left: 1060px;
+    /* position: absolute; */
     border: solid 1px white;
     border-radius: 2%;
     padding: 0.25em 1em;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .architects {
-    position: absolute;
-    top: 47px;
-    left: 1193px;
+    /* position: absolute; */
     border: solid 1px white;
     border-radius: 2%;
     padding: 0.25em 1em;
     cursor: pointer;
 }
 
-.header {
-    position: relative;
-    height: 294px;
-    width: 1276px;
-    top: 94px;
-    left: 81px;
-    background-image: url(images/Frame\ 4.png);
+
+.top {
+    display: flex;
 }
 
-.intro-nfts {
-    position: absolute;
-    top: 430px;
-    left: 81px;
+.top div {
+    flex-grow: 1;
+}
+
+.header {
+    /* height: 294px;
+    width: 1276px; */
+
+    aspect-ratio: 1276/294;
+    margin: 27px 0;
+    background-image: url(images/Frame\ 4.png);
+    background-size: cover;
 }
 
 .nfts {
-    position: absolute;
-    width: 1280px;
-    height: 639px;
-    left: 81px;
-    top: 480px;
+    /* position: absolute; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap:2px;
+    margin: 27px 0;
 }
 
-.nftbox1 {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
+.nftbox {
+    /* position: absolute; */
+    /* width: 320px;
+    height: 320px; */
+    background-color: rgba(255,255,255,0.05);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    padding: 16px;
 
-.nftbox2 {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    left: 320px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nftbox3 {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    left: 640px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nftbox4 {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    left: 960px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nftbox5 {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    top: 320px;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nftbox6 {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    top: 320px;
-    left: 320px;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nftbox7 {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    top: 320px;
-    left: 640px;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nftbox8 {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    top: 320px;
-    left: 960px;
 }
 
 .nft-round {
-    position: absolute;
-    top: 16px;
-    left: 16px;
+    /* position: absolute; */
     font-size: 12px;
+    grid-area: 1/1;
 }
 
 .nft-type {
-    position: absolute;
-    top: 16px;
-    right: 16px;
+    /* position: absolute; */
     font-size: 12px;
+    grid-area: 1/2;
+    text-align: right;
 }
 
 .nft-name {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
+    /* position: absolute; */
     font-size: 12px;
     color: white;
+    grid-area: 3/1;
 }
 
 .nft-level {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
+    /* position: absolute; */
     font-size: 12px;
+    grid-area: 3/2;
+    text-align: right;
+}
+
+.nft-image {
+    --planet-level: 7;
+    aspect-ratio: 1;
+    grid-area: 2 / span 2;
+    margin: calc((8 - var(--planet-level)) * 5%);
+    align-self: center;
+}
+
+.nft-image video {
+    max-width: 100%;
+    max-height: 100%;
+
+    border-radius: 100%;
 }
 
 .nft1 {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    top: 100px;
-    left: 100px;
-    border-radius: 100%;
+    --planet-level: 3;
 }
 
 .nft2 {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    top: 100px;
-    left: 100px;
-    border-radius: 100%;
+    --planet-level: 3;
 }
 
 .nft3 {
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    top: 50px;
-    left: 50px;
-    border-radius: 100%;
+    --planet-level: 6;
 }
 
 .nft4 {
-    position: absolute;
-    width: 170px;
-    height: 170px;
-    top: 75px;
-    left: 75px;
-    border-radius: 100%;
+    --planet-level: 4;
 }
 
 .nft5 {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 110px;
-    left: 110px;
-    border-radius: 100%;
+    --planet-level: 2;
 }
 
 .nft6 {
-    position: absolute;
-    width: 170px;
-    height: 170px;
-    top: 75px;
-    left: 75px;
-    border-radius: 100%;
-}
-
-.intro-events {
-    position: absolute;
-    top: 1217px;
-    left: 81px;
-}
-
-.events {
-    position: absolute;
-    top: 1280px;
-    left: 81px;
-    width: 1280px;
-    height: 640x;
+    --planet-level: 4;
 }
 
 .event-title {
-    position: relative;
+    /* position: relative; */
     top: 30px;
     font-size: 15px;
     color: white;
@@ -442,70 +343,55 @@ p {}
     user-select: none;
 }
 
-.box-remembered {
-    position: absolute;
-    width: 320px;
-    height: 80px;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
+
+.events {
+    margin: 27px 0;
 }
 
-.box-intergalactic-yolo {
-    position: absolute;
-    width: 320px;
-    height: 80px;
-    left: 320px;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-}
+.title-container {
+    display: flex;
+    background-color: rgba(255,255,255,0.05);
 
-.box-astral-colossus {
-    position: absolute;
-    width: 320px;
-    height: 80px;
-    left: 640px;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-}
 
-.box-junk-wars {
-    position: absolute;
-    width: 320px;
+.title-container a {
+    flex: 1;
     height: 80px;
-    left: 960px;
-    text-align: center;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box-description {
-    position: absolute;
-    width: 1280px;
-    height: 400px;
+    min-height: 400px;
     top: 80px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    display: table;
+
+    display: flex;
+}
+
+.box-description div {
+    align-items: center;
+    padding: 10px;
 }
 
 .description-remembered {
-    position: relative;
-    width: 640px;
-    height: 400px;
-    right: 200px;
+    /* position: relative; */
     text-align: center;
     vertical-align: middle;
     font-size: 13px;
     display: none;
+    flex: 3;
 }
 
 .image-remembered {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 50px;
-    left: 50px;
+    max-width: 100%;
     vertical-align: middle;
     background-image: url(images/Remembered-TheVelorum.gif);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: none;
+    flex: 2;
 }
 .image-intergalactic-yolo, .image-astral-colossus, .image-junk-wars {
     position: absolute;
@@ -519,10 +405,8 @@ p {}
 }
 
 .description-intergalactic-yolo {
-    position: relative;
-    width: 640px;
-    height: 400px;
-    right: 200px;
+    /* position: relative; */
+
     text-align: center;
     vertical-align: middle;
     font-size: 13px;
@@ -530,10 +414,7 @@ p {}
 }
 
 .description-astral-colossus {
-    position: relative;
-    width: 640px;
-    height: 400px;
-    right: 200px;
+    /* position: relative; */
     text-align: center;
     vertical-align: middle;
     font-size: 13px;
@@ -541,10 +422,7 @@ p {}
 }
 
 .description-junk-wars {
-    position: relative;
-    width: 640px;
-    height: 400px;
-    right: 200px;
+    /* position: relative; */
     text-align: center;
     vertical-align: middle;
     font-size: 13px;
