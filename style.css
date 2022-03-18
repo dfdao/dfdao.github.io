@@ -16,6 +16,7 @@
     color: cyan;
 }
 
+
 /* @media (prefers-color-scheme: dark) { */
 
 :root {
@@ -46,6 +47,7 @@
     scrollbar-width: none;
     /* Firefox */
 }
+
 
 /* } */
 
@@ -86,6 +88,7 @@ h1 {
     margin-bottom: 4px;
 }
 
+
 /* a:hover{
         transition: 300ms;
         color: var(--colorPrimary);
@@ -113,6 +116,7 @@ h1 {
     text-align: center;
 }
 
+
 /* button at the index.html */
 
 .fancybutton {
@@ -124,8 +128,7 @@ h1 {
     border: white 1px solid;
     padding: 0.25em 1em;
     border-radius: 0.25em;
-    box-shadow: inset 0 0 0.5em 0 rgb(255, 255, 255, 0.5),
-        0 0 0.5em 0 rgb(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 0.5em 0 rgb(255, 255, 255, 0.5), 0 0 0.5em 0 rgb(255, 255, 255, 0.5);
 }
 
 .fancybutton::before {
@@ -204,6 +207,7 @@ td:first-child {
     margin-right: 8px;
 }
 
+
 /* gallery.html */
 
 .gallery-container {
@@ -229,7 +233,6 @@ td:first-child {
     cursor: pointer;
 }
 
-
 .top {
     display: flex;
 }
@@ -241,7 +244,6 @@ td:first-child {
 .header {
     /* height: 294px;
     width: 1276px; */
-
     aspect-ratio: 1276/294;
     margin: 27px 0;
     background-image: url(images/Frame\ 4.png);
@@ -252,7 +254,7 @@ td:first-child {
     /* position: absolute; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap:2px;
+    grid-gap: 2px;
     margin: 27px 0;
 }
 
@@ -260,12 +262,11 @@ td:first-child {
     /* position: absolute; */
     /* width: 320px;
     height: 320px; */
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255, 255, 255, 0.05);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto;
     padding: 16px;
-
 }
 
 .nft-round {
@@ -306,7 +307,6 @@ td:first-child {
 .nft-image video {
     max-width: 100%;
     max-height: 100%;
-
     border-radius: 100%;
 }
 
@@ -343,21 +343,57 @@ td:first-child {
     user-select: none;
 }
 
-
 .events {
     margin: 27px 0;
 }
 
 .title-container {
-    display: flex;
-    background-color: rgba(255,255,255,0.05);
+    /* position: absolute; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 2px;
+    margin: 27px 0;
+}
+
+.box-remembered,
+.box-intergalactic-yolo,
+.box-astral-colossus,
+.box-junk-wars {
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.box-remembered:hover {
+    background-color: rgba(255, 0, 255, 0.3);
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+.box-intergalactic-yolo:hover {
+    background-color: rgb(210, 105, 30, 0.3);
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+.box-astral-colossus:hover {
+    background-color: rgb(0, 255, 255, 0.3);
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+.box-junk-wars:hover {
+    background-color: rgb(138, 43, 226, 0.3);
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
 }
 
 .title-container a {
     flex: 1;
     height: 80px;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,7 +402,6 @@ td:first-child {
 .box-description {
     min-height: 400px;
     top: 80px;
-
     display: flex;
 }
 
@@ -393,7 +428,10 @@ td:first-child {
     display: none;
     flex: 2;
 }
-.image-intergalactic-yolo, .image-astral-colossus, .image-junk-wars {
+
+.image-intergalactic-yolo,
+.image-astral-colossus,
+.image-junk-wars {
     position: absolute;
     width: 300px;
     height: 300px;
@@ -406,7 +444,6 @@ td:first-child {
 
 .description-intergalactic-yolo {
     /* position: relative; */
-
     text-align: center;
     vertical-align: middle;
     font-size: 13px;
