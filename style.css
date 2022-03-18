@@ -229,6 +229,7 @@ td:first-child {
     /* position: absolute; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap:2px;
     margin: 27px 0;
 }
 
@@ -236,8 +237,7 @@ td:first-child {
     /* position: absolute; */
     /* width: 320px;
     height: 320px; */
-
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255,255,255,0.05);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto;
@@ -324,6 +324,7 @@ td:first-child {
 
 .title-container {
     display: flex;
+    background-color: rgba(255,255,255,0.05);
 }
 
 .title-container a {
