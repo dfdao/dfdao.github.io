@@ -273,41 +273,39 @@ td:first-child {
 
 .nft-image {
     --planet-level: 7;
-    background-size: cover;
     aspect-ratio: 1;
-    border-radius: 100%;
     grid-area: 2 / span 2;
     margin: calc((8 - var(--planet-level)) * 5%);
     align-self: center;
 }
 
+.nft-image video {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 100%;
+}
+
 .nft1 {
-    background-image: url(images/Catch\ Cabagge\ Mountain.gif);
     --planet-level: 3;
 }
 
 .nft2 {
-    background-image: url(images/Idealless\ Joeys.gif);
     --planet-level: 3;
 }
 
 .nft3 {
-    background-image: url(images/Aberrant\ Chief.gif);
     --planet-level: 6;
 }
 
 .nft4 {
-    background-image: url(images/Cherries\ Abandon\ Blade.gif);
     --planet-level: 4;
 }
 
 .nft5 {
-    background-image: url(images/Ring\ Rush.gif);
     --planet-level: 2;
 }
 
 .nft6 {
-    background-image: url(images/Straigth\ Birthday\ Sheet.gif);
     --planet-level: 4;
 }
 
