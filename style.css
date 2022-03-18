@@ -364,28 +364,28 @@ td:first-child {
 }
 
 .box-remembered:hover {
-    background-color: rgba(255, 0, 255, 0.3);
+    background-color: rgba(255, 0, 255, 0.1);
     -webkit-transition: background-color 300ms linear;
     -ms-transition: background-color 300ms linear;
     transition: background-color 300ms linear;
 }
 
 .box-intergalactic-yolo:hover {
-    background-color: rgb(210, 105, 30, 0.3);
+    background-color: rgb(210, 105, 30, 0.1);
     -webkit-transition: background-color 300ms linear;
     -ms-transition: background-color 300ms linear;
     transition: background-color 300ms linear;
 }
 
 .box-astral-colossus:hover {
-    background-color: rgb(0, 255, 255, 0.3);
+    background-color: rgb(0, 255, 255, 0.1);
     -webkit-transition: background-color 300ms linear;
     -ms-transition: background-color 300ms linear;
     transition: background-color 300ms linear;
 }
 
 .box-junk-wars:hover {
-    background-color: rgb(138, 43, 226, 0.3);
+    background-color: rgb(138, 43, 226, 0.1);
     -webkit-transition: background-color 300ms linear;
     -ms-transition: background-color 300ms linear;
     transition: background-color 300ms linear;
