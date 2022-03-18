@@ -29,42 +29,49 @@
         <div class="intro-nfts"><span style="color:white">DAO-owned NFTs</span> Mythic artifacts and round end Trophies</div>
         <div class="nfts">
             <div class="nftbox">
-                <div class="nft1 nft-image"></div>
+                <video class="nft1 nft-image" src="/images/Catch Cabbage Mountain.webm " autoplay muted loop>
+                </video>
                 <div class="nft-round">Fascinated Manager</div>
                 <div class="nft-type"> ETH mainnet</div>
                 <div class="nft-name"> Catch Cabbage Mountain</div>
                 <div class="nft-level"> Level 3/7</div>
             </div>
             <div class="nftbox">
-                <div class="nft2 nft-image"></div>
+                <video class="nft2 nft-image" src="/images/Idealless Joeys.webm " autoplay muted loop>
+            </video>
                 <div class="nft-round">Fascinated Manager</div>
                 <div class="nft-type"> ETH mainnet</div>
                 <div class="nft-name"> Idealless Joeys</div>
                 <div class="nft-level"> Level 3/7</div>
             </div>
             <div class="nftbox">
-                <div class="nft3 nft-image"></div>
+
+                <video class="nft3 nft-image" src="/images/Aberrant Chief.webm " autoplay muted loop>
+                </video>
                 <div class="nft-round">Inspired Hallowed</div>
                 <div class="nft-type"> ETH mainnet</div>
                 <div class="nft-name"> Aberrant Chief</div>
                 <div class="nft-level"> Level 6/7</div>
             </div>
             <div class="nftbox">
-                <div class="nft4 nft-image"></div>
+                <video class="nft4 nft-image" src="/images/Cherries Abandon Blade.webm " autoplay muted loop>
+                </video>
                 <div class="nft-round">Society Eggno(n)g</div>
                 <div class="nft-type"> ETH mainnet</div>
                 <div class="nft-name"> Cherries Abandon Blade</div>
                 <div class="nft-level"> Level 4/7</div>
             </div>
             <div class="nftbox">
-                <div class="nft5 nft-image"></div>
+                <video class="nft5 nft-image" src="/images/Ring Rush.webm " autoplay muted loop>
+                </video>
                 <div class="nft-round">Society Eggno(n)g</div>
                 <div class="nft-type"> ETH mainnet</div>
                 <div class="nft-name"> Ring Rush - <a href="https://astralcolossus.xyz/" style="color:cyan;">Astral Colossus</a></div>
                 <div class="nft-level"> Level 2/7</div>
             </div>
             <div class="nftbox">
-                <div class="nft6 nft-image"></div>
+                <video class="nft6 nft-image" src="/images/Straight Birthday Sheet.webm " autoplay muted loop>
+                </video>
                 <div class="nft-round">Grape Extra-Small</div>
                 <div class="nft-type"> ETH mainnet</div>
                 <div class="nft-name"> Straight Birthday Sheet</div>
@@ -136,7 +143,7 @@
         let descriptionJunkWars = document.querySelector('.description-junk-wars');
 
         boxRemembered.addEventListener('click', () => {
-            if (imageRemembered.style.display == 'none' && descriptionRemembered.style.display == 'none') {
+            if (getComputedStyle(imageRemembered).display == 'none' && getComputedStyle(descriptionRemembered).display == 'none') {
                 imageRemembered.style.display = 'flex';
                 descriptionRemembered.style.display = 'flex';
                 imageIntergalacticYolo.style.display = 'none';
@@ -152,7 +159,7 @@
         })
 
         boxIntergalacticYolo.addEventListener('click', () => {
-            if (imageIntergalacticYolo.style.display == 'none' && descriptionIntergalacticYolo.style.display == 'none') {
+            if (getComputedStyle(imageIntergalacticYolo).display == 'none' && getComputedStyle(descriptionIntergalacticYolo).display == 'none') {
                 imageIntergalacticYolo.style.display = 'flex';
                 descriptionIntergalacticYolo.style.display = 'flex';
                 imageRemembered.style.display = 'none';
@@ -168,7 +175,7 @@
         })
 
         boxAstralColossus.addEventListener('click', () => {
-            if (imageAstralColossus.style.display == 'none' && descriptionAstralColossus.style.display == 'none') {
+            if (getComputedStyle(imageAstralColossus).display == 'none' && getComputedStyle(descriptionAstralColossus).display == 'none') {
                 imageAstralColossus.style.display = 'flex';
                 descriptionAstralColossus.style.display = 'flex';
                 imageRemembered.style.display = 'none';
@@ -184,7 +191,7 @@
         })
 
         boxJunkWars.addEventListener('click', () => {
-            if (imageJunkWars.style.display == 'none' && descriptionJunkWars.style.display == 'none') {
+            if (getComputedStyle(imageJunkWars).display == 'none' && getComputedStyle(descriptionJunkWars).display == 'none') {
                 imageJunkWars.style.display = 'flex';
                 descriptionJunkWars.style.display = 'flex';
                 imageRemembered.style.display = 'none';
