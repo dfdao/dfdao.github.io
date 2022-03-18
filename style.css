@@ -25,6 +25,28 @@
     --colorBackground: #000;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+* {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
 /* } */
 
 :root {
@@ -207,6 +229,7 @@ td:first-child {
     cursor: pointer;
 }
 
+
 .top {
     display: flex;
 }
@@ -242,6 +265,7 @@ td:first-child {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto;
     padding: 16px;
+
 }
 
 .nft-round {
@@ -282,6 +306,7 @@ td:first-child {
 .nft-image video {
     max-width: 100%;
     max-height: 100%;
+
     border-radius: 100%;
 }
 
@@ -318,6 +343,7 @@ td:first-child {
     user-select: none;
 }
 
+
 .events {
     margin: 27px 0;
 }
@@ -325,11 +351,12 @@ td:first-child {
 .title-container {
     display: flex;
     background-color: rgba(255,255,255,0.05);
-}
+
 
 .title-container a {
     flex: 1;
     height: 80px;
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: center;
@@ -339,6 +366,7 @@ td:first-child {
 .box-description {
     min-height: 400px;
     top: 80px;
+
     display: flex;
 }
 
@@ -364,6 +392,16 @@ td:first-child {
     background-repeat: no-repeat;
     display: none;
     flex: 2;
+}
+.image-intergalactic-yolo, .image-astral-colossus, .image-junk-wars {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50px;
+    left: 50px;
+    vertical-align: middle;
+    background-size: cover;
+    display: none;
 }
 
 .description-intergalactic-yolo {
