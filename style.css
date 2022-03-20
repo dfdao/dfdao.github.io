@@ -402,7 +402,8 @@ td:first-child {
 .box-description {
     min-height: 400px;
     top: 80px;
-    display: flex;
+    display: grid;
+    grid-template: "b b" "a a" "c c";
 }
 
 .box-description div {
@@ -417,16 +418,28 @@ td:first-child {
     font-size: 13px;
     display: none;
     flex: 3;
+    grid-area: b;
+}
+
+.table-remembered {
+    grid-area: c;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    display: none;
+}
+
+.table-remembered>a {
+    padding: 8px 4px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .image-remembered {
-    max-width: 100%;
     vertical-align: middle;
-    background-image: url(images/Remembered-TheVelorum.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
     display: none;
     flex: 2;
+    grid-area: a;
 }
 
 .image-intergalactic-yolo,
