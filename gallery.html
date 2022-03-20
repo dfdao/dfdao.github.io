@@ -101,12 +101,72 @@
                 <a class="box-astral-colossus "><span class="event-title "> <span style="color:cyan ">R4 </span>The Astral Colossus</span></a>
                 <a class="box-junk-wars "><span class="event-title "> <span style="color:blueviolet ">R5 </span>The Junk Wars</span></a>
             </div>
-            <div class="box-description ">
+            <div class="box-description">
 
-                <div class="image-remembered " style="display: flex;"></div>
-                <div class="description-remembered " style="display: flex;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at lacus risus. Praesent vulputate nibh id tempus elementum. Etiam eget justo rhoncus, sagittis tellus vel, sollicitudin purus. Sed ullamcorper vel dui eget tempus.
-                    Praesent vel lectus ut turpis dapibus accumsan. Vivamus sed lorem commodo, pulvinar quam a, feugiat arcu. Proin ornare nec dolor et vulputate. Fusce non mauris commodo est hendrerit auctor. Maecenas a risus velit. Quisque mauris nibh,
-                    venenatis eu ipsum vel, elementum condimentum nulla.</div>
+                <div class="image-remembered " style="display: none;">
+                    <video src="./images/Remembered-TheVelorum.mp4" width="50%" style="max-width:250px; margin-left: auto; margin-right: auto; display: block" autoplay muted loop></video>
+                </div>
+                <div class="description-remembered " style="display: none;"> The Remembered was a group of people that participated in the Round 2 when we fighted Orden_gg (in that time ghst_gg) for the highest position of the leaderboard, they gifted DFDAO their empires or part of them in order to catch orden_gg
+                    in the last days, but orden_gg still won since they had a big amount of points waiting to be claimed at the end of the round to surprise us.
+                </div>
+                <div class="table-remembered">
+                    <a style="color:white;">Member</a>
+                    <a style="color:white;">NFT</a>
+                    <a style="color:white;">Level</a>
+
+
+                    <a>TheDavidZhou</a>
+                    <a>Remembering @TheDavidZhou</a>
+                    <a>3</a>
+
+                    <a>Bitcoin4bernie</a>
+                    <a>Remembering @bitcoin4bernie</a>
+                    <a>3</a>
+
+                    <a>Jacksondame</a>
+                    <a>Remembering @jacksondame</a>
+                    <a>3</a>
+
+                    <a>ClemensWittman</a>
+                    <a>Remembering @ClemensWittman</a>
+                    <a>3</a>
+
+                    <a>TheVelorum</a>
+                    <a>Remembering @TheVelorum</a>
+                    <a>2</a>
+
+                    <a>Ner0nzz</a>
+                    <a>Remembering @Ner0nzz</a>
+                    <a>2</a>
+
+                    <a>Eichenkundiger</a>
+                    <a href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/115706393020662740609057646327795441124408148716072588586714068347418698579969">Remembering @Eichenkundiger</a>
+                    <a>2</a>
+
+                    <a>Algoriddms</a>
+                    <a>Remembering @algoriddms</a>
+                    <a>2</a>
+
+                    <a>Scotato</a>
+                    <a>Remembering @scotato</a>
+                    <a>1</a>
+
+                    <a>Nationalbank</a>
+                    <a>Remembering @nationalbank</a>
+                    <a>1</a>
+
+                    <a>retinoic</a>
+                    <a>Remembering @retinoic</a>
+                    <a>1</a>
+
+                    <a>Stuneberg</a>
+                    <a>Remembering @stuneberg</a>
+                    <a>1</a>
+
+                    <a>Spencecoin</a>
+                    <a>Remembering @spencecoin</a>
+                    <a>1</a>
+                </div>
 
                 <div class="image-intergalactic-yolo " style="display: none;"></div>
                 <div class="description-intergalactic-yolo " style="display: none;">Donec ac cursus augue. Aliquam erat volutpat. Nulla rhoncus magna non eros blandit, eget sollicitudin dolor gravida. Donec auctor placerat mi. Sed nunc ipsum, pretium sed condimentum a, pretium accumsan dolor. Aenean fermentum mauris in
@@ -129,6 +189,7 @@
         let boxRemembered = document.querySelector('.box-remembered');
         let imageRemembered = document.querySelector('.image-remembered');
         let descriptionRemembered = document.querySelector('.description-remembered');
+        let tableRemembered = document.querySelector('.table-remembered');
 
         let boxIntergalacticYolo = document.querySelector('.box-intergalactic-yolo');
         let imageIntergalacticYolo = document.querySelector('.image-intergalactic-yolo');
@@ -146,15 +207,20 @@
             if (getComputedStyle(imageRemembered).display == 'none' && getComputedStyle(descriptionRemembered).display == 'none') {
                 imageRemembered.style.display = 'flex';
                 descriptionRemembered.style.display = 'flex';
+                tableRemembered.style.display = 'grid';
+
                 imageIntergalacticYolo.style.display = 'none';
                 descriptionIntergalacticYolo.style.display = 'none';
+
                 imageAstralColossus.style.display = 'none';
                 descriptionAstralColossus.style.display = 'none';
+
                 imageJunkWars.style.display = 'none';
                 descriptionJunkWars.style.display = 'none';
             } else {
                 imageRemembered.style.display = 'none';
                 descriptionRemembered.style.display = 'none';
+                tableRemembered.style.display = 'none';
             }
         })
 
@@ -162,8 +228,11 @@
             if (getComputedStyle(imageIntergalacticYolo).display == 'none' && getComputedStyle(descriptionIntergalacticYolo).display == 'none') {
                 imageIntergalacticYolo.style.display = 'flex';
                 descriptionIntergalacticYolo.style.display = 'flex';
+
                 imageRemembered.style.display = 'none';
                 descriptionRemembered.style.display = 'none';
+                tableRemembered.style.display = 'none';
+
                 imageAstralColossus.style.display = 'none';
                 descriptionAstralColossus.style.display = 'none';
                 imageJunkWars.style.display = 'none';
@@ -178,10 +247,14 @@
             if (getComputedStyle(imageAstralColossus).display == 'none' && getComputedStyle(descriptionAstralColossus).display == 'none') {
                 imageAstralColossus.style.display = 'flex';
                 descriptionAstralColossus.style.display = 'flex';
+
                 imageRemembered.style.display = 'none';
                 descriptionRemembered.style.display = 'none';
+                tableRemembered.style.display = 'none';
+
                 imageIntergalacticYolo.style.display = 'none';
                 descriptionIntergalacticYolo.style.display = 'none';
+
                 imageJunkWars.style.display = 'none';
                 descriptionJunkWars.style.display = 'none';
             } else {
@@ -194,10 +267,14 @@
             if (getComputedStyle(imageJunkWars).display == 'none' && getComputedStyle(descriptionJunkWars).display == 'none') {
                 imageJunkWars.style.display = 'flex';
                 descriptionJunkWars.style.display = 'flex';
+
                 imageRemembered.style.display = 'none';
                 descriptionRemembered.style.display = 'none';
+                tableRemembered.style.display = 'none';
+
                 imageIntergalacticYolo.style.display = 'none';
                 descriptionIntergalacticYolo.style.display = 'none';
+
                 imageAstralColossus.style.display = 'none';
                 descriptionAstralColossus.style.display = 'none';
 
