@@ -403,7 +403,7 @@ td:first-child {
     min-height: 400px;
     top: 80px;
     display: grid;
-    grid-template: "b b" "a a" "c c";
+    grid-template: "a a" "b b" "c c" "d d";
 }
 
 .box-description div {
@@ -412,17 +412,19 @@ td:first-child {
 }
 
 .description-remembered {
-    /* position: relative; */
+    position: relative;
+    margin: auto;
+    max-width: 900px;
     text-align: center;
     vertical-align: middle;
     font-size: 13px;
     display: none;
     flex: 3;
-    grid-area: b;
+    grid-area: a;
 }
 
 .table-remembered {
-    grid-area: c;
+    grid-area: d;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
@@ -435,15 +437,61 @@ td:first-child {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.link-remembered {
+    position: relative;
+    grid-area: c;
+    padding: 10px;
+    margin: auto;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3%;
+    padding: 1.4rem 4.2rem;
+    padding-right: 3.1rem;
+    font-size: 1.4rem;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    cursor: pointer;
+    user-select: none;
+}
+
+.link-remembered:before,
+.link-remembered:after {
+    content: '';
+    position: absolute;
+    transition: inherit;
+    z-index: -1;
+}
+
+.link-remembered:hover {
+    color: rgba(255, 50, 255, 0.7);
+    transition-delay: .5s;
+}
+
+.link-remembered:hover:before {
+    transition-delay: 0s;
+}
+
+.link-remembered:hover:after {
+    background: rgba(255, 255, 255, 0.1);
+    transition-delay: .35s;
+}
+
 .image-remembered {
     vertical-align: middle;
     display: none;
     flex: 2;
-    grid-area: a;
+    grid-area: b;
+}
+
+.image-astral-colossus {
+    vertical-align: middle;
+    display: none;
+    flex: 2;
+    border-radius: 100%;
+    grid-area: b;
 }
 
 .image-intergalactic-yolo,
-.image-astral-colossus,
 .image-junk-wars {
     position: absolute;
     width: 300px;
@@ -456,11 +504,77 @@ td:first-child {
 }
 
 .description-intergalactic-yolo {
-    /* position: relative; */
+    position: relative;
+    margin: auto;
     text-align: center;
+    max-width: 900px;
     vertical-align: middle;
     font-size: 13px;
     display: none;
+    grid-area: a;
+}
+
+.link-intergalactic-yolo {
+    position: relative;
+    grid-area: b;
+    padding: 10px;
+    margin: auto;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3%;
+    padding: 1.4rem 4.2rem;
+    padding-right: 3.1rem;
+    font-size: 1.4rem;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    cursor: pointer;
+    user-select: none;
+}
+
+.link-intergalactic-yolo:before,
+.link-intergalactic-yolo:after {
+    content: '';
+    position: absolute;
+    transition: inherit;
+    z-index: -1;
+}
+
+.link-intergalactic-yolo:hover {
+    color: chocolate;
+    transition-delay: .5s;
+}
+
+.link-intergalactic-yolo:hover:before {
+    transition-delay: 0s;
+}
+
+.link-intergalactic-yolo:hover:after {
+    background: rgba(255, 255, 255, 0.1);
+    transition-delay: .35s;
+}
+
+.from-top:before,
+.from-top:after {
+    left: 0;
+    height: 0;
+    width: 100%;
+}
+
+.from-top:before {
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.from-top:after {
+    top: 0;
+    height: 0;
+}
+
+.from-top:hover:before,
+.from-top:hover:after {
+    height: 100%;
 }
 
 .description-astral-colossus {
@@ -469,6 +583,59 @@ td:first-child {
     vertical-align: middle;
     font-size: 13px;
     display: none;
+}
+
+.link-astral-colossus {
+    position: relative;
+    grid-area: c;
+    padding: 10px;
+    margin: auto;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3%;
+    padding: 1.4rem 4.2rem;
+    padding-right: 3.1rem;
+    font-size: 1.4rem;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    cursor: pointer;
+    user-select: none;
+}
+
+.link-astral-colossus:before,
+.link-astral-colossus:after {
+    content: '';
+    position: absolute;
+    transition: inherit;
+    z-index: -1;
+}
+
+.link-astral-colossus:hover {
+    color: cyan;
+    transition-delay: .5s;
+}
+
+.link-astral-colossus:hover:before {
+    transition-delay: 0s;
+}
+
+.link-astral-colossus:hover:after {
+    background: rgba(255, 255, 255, 0.1);
+    transition-delay: .35s;
+}
+
+.table-astral-colossus {
+    grid-area: d;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    display: none;
+}
+
+.table-astral-colossus>a {
+    padding: 8px 4px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .description-junk-wars {
