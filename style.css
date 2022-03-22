@@ -638,6 +638,20 @@ td:first-child {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.table-intergalactic-yolo {
+    grid-area: d;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    display: none;
+}
+
+.table-intergalactic-yolo>a {
+    padding: 8px 4px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .description-junk-wars {
     /* position: relative; */
     text-align: center;
