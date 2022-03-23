@@ -565,11 +565,14 @@ h1 {
 }
 
 .description-astral-colossus {
-    /* position: relative; */
+    position: relative;
+    margin: auto;
     text-align: center;
+    max-width: 900px;
     vertical-align: middle;
     font-size: 13px;
     display: none;
+    grid-area: a;
 }
 
 .link-astral-colossus {
