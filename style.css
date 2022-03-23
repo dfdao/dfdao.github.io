@@ -187,26 +187,6 @@ h1 {
     margin-bottom: 24px;
 }
 
-table {
-    margin-top: 16px;
-    width: 100%;
-}
-
-tr {
-    width: 100%;
-    display: flex;
-    /* justify-content: space-between; */
-    padding: 8px 0px;
-    /* border-top: 1px solid #1d1d1d; */
-    /* border-bottom: 1px solid #1d1d1d; */
-    margin-bottom: -1px;
-}
-
-td:first-child {
-    color: white;
-    margin-right: 8px;
-}
-
 
 /* gallery.html */
 
@@ -403,6 +383,8 @@ td:first-child {
     min-height: 400px;
     top: 80px;
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template: "a a" "b b" "c c" "d d";
 }
 
@@ -425,14 +407,19 @@ td:first-child {
 
 .table-remembered {
     grid-area: d;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
+    margin: 25px auto;
     display: none;
 }
 
-.table-remembered>a {
-    padding: 8px 4px;
+.table-remembered td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 2px 2px;
+}
+
+.table-remembered th {
+    padding: 12px 15px;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -626,28 +613,38 @@ td:first-child {
 
 .table-astral-colossus {
     grid-area: d;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 10px;
+    margin: 25px auto;
     display: none;
 }
 
-.table-astral-colossus>a {
-    padding: 8px 4px;
+.table-astral-colossus td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 2px 2px;
+}
+
+.table-astral-colossus th {
+    padding: 12px 15px;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .table-intergalactic-yolo {
     grid-area: d;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 10px;
+    margin: 25px auto;
     display: none;
 }
 
-.table-intergalactic-yolo>a {
-    padding: 8px 4px;
+.table-intergalactic-yolo td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 2px 2px;
+}
+
+.table-intergalactic-yolo th {
+    padding: 12px 15px;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -658,4 +655,106 @@ td:first-child {
     vertical-align: middle;
     font-size: 13px;
     display: none;
+}
+
+@media(max-width:500px) {
+    .table-remembered thead {
+        display: none;
+    }
+    .table-remembered {
+        display: none;
+        width: 100%;
+    }
+    .table-remembered .tbody,
+    .table-remembered tr,
+    .table-remembered td {
+        display: block;
+        width: 100%;
+    }
+    .table-remembered tr {
+        margin-bottom: 15px;
+    }
+    .table-remembered td {
+        text-align: right;
+        padding-left: 1%;
+        font-size: 13px;
+        text-align: right;
+        position: relative;
+    }
+    .table-remembered td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: left;
+    }
+    .table-intergalactic-yolo thead {
+        display: none;
+    }
+    .table-intergalactic-yolo {
+        display: none;
+        width: 100%;
+    }
+    .table-intergalactic-yolo .tbody,
+    .table-intergalactic-yolo tr,
+    .table-intergalactic-yolo td {
+        display: block;
+        width: 100%;
+    }
+    .table-intergalactic-yolo tr {
+        margin-bottom: 15px;
+    }
+    .table-intergalactic-yolo td {
+        text-align: right;
+        padding-left: 1%;
+        font-size: 13px;
+        text-align: right;
+        position: relative;
+    }
+    .table-intergalactic-yolo td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: left;
+    }
+    .table-astral-colossus thead {
+        display: none;
+    }
+    .table-astral-colossus {
+        display: none;
+        width: 100%;
+    }
+    .table-astral-colossus .tbody,
+    .table-astral-colossus tr,
+    .table-astral-colossus td {
+        display: block;
+        width: 130%;
+    }
+    .table-astral-colossus tr {
+        margin-bottom: 15px;
+    }
+    .table-astral-colossus td {
+        text-align: right;
+        padding-left: 1%;
+        font-size: 13px;
+        text-align: right;
+        position: relative;
+    }
+    .table-astral-colossus td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: left;
+    }
 }
