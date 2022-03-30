@@ -7,9 +7,9 @@ const provider = new ethers.providers.JsonRpcProvider(rpcEndpoint);
 const colossus = new ethers.Contract(colossusAddress, colossusABI, provider);
 
 colossus.playerCounter().then(async count => {
-  for(let i = 0; i < count; i++) {
-    const playerAddress = await colossus.players(i);
-    const playerScore = await colossus.contributions(playerAddress);
-    console.log(`addy ${playerAddress} score ${playerScore}`);
-  }
+    for (let i = 0; i < count; i++) {
+        const playerAddress = await colossus.players(i);
+        const playerScore = await colossus.contributions(playerAddress);
+        console.log(`addy ${playerAddress} score ${playerScore}`);
+    }
 });
