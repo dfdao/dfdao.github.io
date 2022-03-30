@@ -296,7 +296,7 @@
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
 
-        function buildTable(data, tableClass) {
+        async function buildTable(data, tableClass) {
             var table = document.querySelector(tableClass)
 
             for (var i = 0; i < data.length; i++) {
@@ -309,7 +309,7 @@
             }
         }
 
-        function buildTable1(data, tableClass) {
+        async function buildTable1(data, tableClass) {
             var table = document.querySelector(tableClass)
 
             for (var i = 0; i < data.length; i++) {
@@ -321,7 +321,7 @@
             }
         }
 
-        function buildTable2(data, tableClass) {
+        async function buildTable2(data, tableClass) {
             var table = document.querySelector(tableClass)
 
             for (var i = 0; i < data.length; i++) {
