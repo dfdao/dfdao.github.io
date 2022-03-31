@@ -139,40 +139,49 @@
             left: 1000px;
             top: 100px;
             height: 800px;
+            width: 600px;
             padding: 16px;
             display: grid;
-            grid-template: "a b" "c c" "d d";
-            grid-template-rows: 50px 232px auto;
+            grid-template-columns: 1fr;
+            grid-auto-rows: min-content;
+            grid-gap: 15px;
             background-color: rgba(255, 255, 255, 0.05);
+            overflow: hidden;
         }
         
         .lobby-name {
-            grid-area: a;
             font-size: 16px;
-            padding: 16px;
+            padding-top: 16px;
+            padding-left: 16px;
             max-height: 20px;
         }
         
         .lobby-address {
-            grid-area: b;
-            padding: 16px;
-            text-align: right;
+            padding-left: 16px;
+            font-size: 12px;
             max-height: 20px;
         }
         
         .lobby-map {
-            grid-area: c;
             width: 200px;
-            padding: 16px;
+            height: 200px;
+            padding-bottom: 32px;
+            padding-left: 16px;
         }
         
         .lobby-scoreboard {
-            margin: 16px;
-            grid-area: d;
+            width: 500px;
+            margin: auto;
+            display: block;
+            height: 450px;
+            overflow-y: auto;
         }
         
         .lobby-scoreboard td {
             text-align: center;
+            width: 400px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px;
         }
         
         .hide {

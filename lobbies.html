@@ -33,7 +33,7 @@
         <div class="cards">
         </div>
         <div class="details">
-            <div class="lobby-name">The Greatest Round</div>
+            <div class="lobby-name">Only Velorums allowed</div>
             <div class="lobby-address">0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803</div>
             <img class="lobby-map" src="images/random-map.png">
             <table class="lobby-scoreboard">
@@ -45,32 +45,102 @@
                         <tr>
                             <td> Velorum</td>
                             <td>1</td>
-                            <td>1000</td>
+                            <td>100,000,000,000,000</td>
                         </tr>
                         <tr>
                             <td> Velorum</td>
-                            <td>1</td>
-                            <td>1000</td>
+                            <td>2</td>
+                            <td>1,000</td>
                         </tr>
                         <tr>
                             <td> Velorum</td>
-                            <td>1</td>
-                            <td>1000</td>
+                            <td>3</td>
+                            <td>1,000</td>
                         </tr>
                         <tr>
                             <td> Velorum</td>
-                            <td>1</td>
-                            <td>1000</td>
+                            <td>4</td>
+                            <td>1,000</td>
                         </tr>
                         <tr>
                             <td> Velorum</td>
-                            <td>1</td>
-                            <td>1000</td>
+                            <td>5</td>
+                            <td>1,000</td>
                         </tr>
                         <tr>
                             <td> Velorum</td>
-                            <td>1</td>
-                            <td>1000</td>
+                            <td>6</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>7</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>8</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>9</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>10</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>11</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>12</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>13</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>14</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>15</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>16</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>17</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>18</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>19</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>20</td>
+                            <td>1,000</td>
                         </tr>
                     </tbody>
                 </thead>
@@ -107,6 +177,9 @@
 
         let users = [];
 
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
         searchInput.addEventListener("input", e => {
 
             const value = e.target.value.toLowerCase();
