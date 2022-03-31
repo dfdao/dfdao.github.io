@@ -21,9 +21,10 @@
 
 <body>
     <div class="lobbies-container">
-        <div class="top">
+
+        <div class="lobbies-top">
             <div class="form">
-                <input type="text" name="name" autocomplete="off" required>
+                <input type="text" name="name" autocomplete="off" required data-search>
                 <label for="name" class="label-name"> 
                     <span class="content-name">Name</span>
                 </label>
@@ -31,8 +32,62 @@
         </div>
         <div class="cards">
         </div>
+        <div class="details">
+            <div class="lobby-name">The Greatest Round</div>
+            <div class="lobby-address">0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803</div>
+            <img class="lobby-map" src="images/random-map.png">
+            <table class="lobby-scoreboard">
+                <thead>
+                    <th style="color:white;">Member</th>
+                    <th style="color:white;">Rank</th>
+                    <th style="color:white;">Score </th>
+                    <tbody>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>1</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>1</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>1</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>1</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>1</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td> Velorum</td>
+                            <td>1</td>
+                            <td>1000</td>
+                        </tr>
+                    </tbody>
+                </thead>
+            </table>
+        </div>
     </div>
-    </div>
+    <template data-user-template>
+        <div class="cardbox">
+            <div class="card-name"></div>
+            <div class="card-address"></div>
+            <div class="card-buttons">
+            <a class="card-details">Details</a>
+            <a class="card-join" target="_blank">Join</a>
+            <a class="card-spectate" target="_blank">Spectate</a>
+            <div>
+      </div>
+    </template>
     <script>
         function readTextFile(file, callback) {
             var rawFile = new XMLHttpRequest();
@@ -46,24 +101,37 @@
             rawFile.send(null);
         }
 
-        async function buildTable(data, tableClass) {
-            var table = document.querySelector(tableClass)
 
-            for (var i = 0; i < data.length; i++) {
-                var row = `<div class="cardbox">
-                            <div class="card-name">${data[i].name}</div>
-                            <div class="card-address">${data[i].address}</div>
-                            <div class="card-details">Details</div>
-                            <a class="card-join" href="https://zkga.me/play/${data[i].address}" target="_blank">Join</a>
-                            <a class="card-spectate" href="https://wonderful-druid-5c3a7e.netlify.app/play/${data[i].address}" target="_blank">Spectate</a>
-					  </div>`
-                table.innerHTML += row
-            }
-        }
+        const searchInput = document.querySelector("[data-search]");
+        const userCardTemplate = document.querySelector("[data-user-template]")
+
+        let users = [];
+
+        searchInput.addEventListener("input", e => {
+
+            const value = e.target.value.toLowerCase();
+            users.forEach(user => {
+                const isVisible = user.name.toLowerCase().includes(value) || user.address.toLowerCase().includes(value);
+                user.element.classList.toggle("hide", !isVisible);
+            })
+        })
 
         readTextFile("./lobbies.json", function(json) {
-            var a = JSON.parse(json);
-            buildTable(a, '.cards');
+            var data = JSON.parse(json);
+
+            users = data.map(user => {
+                const card = userCardTemplate.content.cloneNode(true).children[0];
+                card.querySelector(".card-name").textContent = user.name;
+                card.querySelector(".card-address").textContent = user.address;
+                card.querySelector(".card-join").href = `https://zkga.me/play/${user.address}`;
+                card.querySelector(".card-spectate").href = `https://wonderful-druid-5c3a7e.netlify.app/play/${user.address}`;
+                document.querySelector(".cards").append(card);
+                return {
+                    name: user.name,
+                    address: user.address,
+                    element: card
+                }
+            })
         });
     </script>
 </body>

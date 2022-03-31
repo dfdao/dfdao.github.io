@@ -1,21 +1,27 @@
         body {
-            align-items: top;
+            content: "";
         }
         
         .lobbies-container {
             padding: 47px 12.46%;
             width: 100%;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .lobbies-top {
+            padding-bottom: 10px;
+            max-width: 550px;
         }
         
         .form {
-            width: 50%;
+            width: 100%;
             position: relative;
             height: 50px;
             overflow: hidden;
         }
         
         .form input {
-            width: 40%;
+            width: 100%;
             height: 100%;
             background-color: black;
             padding-top: 10px;
@@ -28,7 +34,7 @@
             position: absolute;
             bottom: 0px;
             left: 0%;
-            width: 40%;
+            width: 100%;
             height: 100%;
             pointer-events: none;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -67,41 +73,42 @@
         }
         
         .cards {
-            display: grid;
-            grid-template-columns: repeat(minmax(200px, 1fr));
-            grid-gap: 2px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            max-width: 550px;
             margin: 27px 0;
         }
         
         .cardbox {
-            max-width: 40%;
-            min-width: 300px;
+            width: 550px;
             min-height: 125px;
             background-color: rgba(255, 255, 255, 0.05);
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr;
+            grid-gap: 1px;
             padding: 16px;
         }
         
         .card-name {
             font-size: 16px;
-            grid-area: 1/1;
+            color: green;
         }
         
         .card-address {
             font-size: 12px;
-            padding-top: 20px;
-            grid-area: 2/1;
-            text-align: right;
+        }
+        
+        .card-buttons {
+            display: flex;
+            gap: 0.5em;
         }
         
         .card-join {
             font-size: 12px;
             color: white;
-            grid-area: 3/1;
-            width: 75px;
             padding: 5px;
+            margin-top: auto;
             text-align: center;
             border: 1px solid white;
         }
@@ -109,9 +116,9 @@
         .card-spectate {
             font-size: 12px;
             color: white;
-            grid-area: 3/3;
             width: 75px;
             padding: 5px;
+            margin-top: auto;
             text-align: center;
             border: 1px solid white;
         }
@@ -122,6 +129,52 @@
             grid-area: 3/2;
             width: 75px;
             padding: 5px;
+            margin-top: auto;
             text-align: center;
             border: 1px solid white;
+        }
+        
+        .details {
+            position: fixed;
+            left: 1000px;
+            top: 100px;
+            height: 800px;
+            padding: 16px;
+            display: grid;
+            grid-template: "a b" "c c" "d d";
+            grid-template-rows: 50px 232px auto;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .lobby-name {
+            grid-area: a;
+            font-size: 16px;
+            padding: 16px;
+            max-height: 20px;
+        }
+        
+        .lobby-address {
+            grid-area: b;
+            padding: 16px;
+            text-align: right;
+            max-height: 20px;
+        }
+        
+        .lobby-map {
+            grid-area: c;
+            width: 200px;
+            padding: 16px;
+        }
+        
+        .lobby-scoreboard {
+            margin: 16px;
+            grid-area: d;
+        }
+        
+        .lobby-scoreboard td {
+            text-align: center;
+        }
+        
+        .hide {
+            display: none;
         }
