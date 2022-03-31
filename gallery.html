@@ -23,9 +23,10 @@
 <body>
     <div class="gallery-container">
         <div class="top">
-            <div class="intro"> <a style="color:white">DFDAO</a> is a collective of Darkforest players</div>
+            <div> <a style="color:white">DFDAO</a> is a collective of Darkforest players</div>
             <a href="guild.html" class="guild"><span style="color:white;">DFDAO</span> Guild</a>
             <a href="Architects.html" class="architects"><span style="color:white;">DFDAO</span> Architects</a>
+            <a href="lobbies.html" class="lobbies"><span style="color:white;">Lobbies</span></a>
         </div>
         <div class="header"></div>
         <div class="intro-nfts"><span style="color:white">DAO-owned NFTs</span> Mythic artifacts and round end Trophies</div>
@@ -296,7 +297,7 @@
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
 
-        function buildTable(data, tableClass) {
+        async function buildTable(data, tableClass) {
             var table = document.querySelector(tableClass)
 
             for (var i = 0; i < data.length; i++) {
@@ -309,7 +310,7 @@
             }
         }
 
-        function buildTable1(data, tableClass) {
+        async function buildTable1(data, tableClass) {
             var table = document.querySelector(tableClass)
 
             for (var i = 0; i < data.length; i++) {
@@ -321,7 +322,7 @@
             }
         }
 
-        function buildTable2(data, tableClass) {
+        async function buildTable2(data, tableClass) {
             var table = document.querySelector(tableClass)
 
             for (var i = 0; i < data.length; i++) {

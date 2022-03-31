@@ -72,7 +72,7 @@ body {
     font-weight: 400;
     color: var(--colorSecondary);
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: center;
     min-height: 100%;
     padding: 0 24px;
@@ -206,6 +206,15 @@ h1 {
 }
 
 .architects {
+    /* position: absolute; */
+    border: solid 1px white;
+    border-radius: 2%;
+    padding: 0.25em 1em;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.lobbies {
     /* position: absolute; */
     border: solid 1px white;
     border-radius: 2%;

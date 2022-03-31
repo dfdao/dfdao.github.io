@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@d_fdao" />
+    <meta name="twitter:title" content="join dfdao" />
+    <meta property="twitter:url" content="http://dfdao.xyz/">
+    <meta name="twitter:description" content="💫 Discord Link 💫" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/dfdao/dfdao.github.io/main/dfdao_banner_discord.png" />
+    <script async defer data-domain="dfdao.xyz" src="https://plausible.one/js/plausible.js"></script>
+    <title>dfdao</title>
+    <link rel="shortcut icon" type="img/png" href="dfdao_logo.png" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lobbies.css">
+</head>
+
+<body>
+    <div class="lobbies-container">
+        <div class="top">
+            <div class="form">
+                <input type="text" name="name" autocomplete="off" required>
+                <label for="name" class="label-name"> 
+                    <span class="content-name">Name</span>
+                </label>
+            </div>
+        </div>
+        <div class="cards">
+        </div>
+    </div>
+    </div>
+    <script>
+        function readTextFile(file, callback) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.overrideMimeType("application/json");
+            rawFile.open("GET", file, true);
+            rawFile.onreadystatechange = function() {
+                if (rawFile.readyState === 4 && rawFile.status == "200") {
+                    callback(rawFile.responseText);
+                }
+            }
+            rawFile.send(null);
+        }
+
+        async function buildTable(data, tableClass) {
+            var table = document.querySelector(tableClass)
+
+            for (var i = 0; i < data.length; i++) {
+                var row = `<div class="cardbox">
+                            <div class="card-name">${data[i].name}</div>
+                            <div class="card-address">${data[i].address}</div>
+                            <div class="card-details">Details</div>
+                            <a class="card-join" href="https://zkga.me/play/${data[i].address}" target="_blank">Join</a>
+                            <a class="card-spectate" href="https://wonderful-druid-5c3a7e.netlify.app/play/${data[i].address}" target="_blank">Spectate</a>
+					  </div>`
+                table.innerHTML += row
+            }
+        }
+
+        readTextFile("./lobbies.json", function(json) {
+            var a = JSON.parse(json);
+            buildTable(a, '.cards');
+        });
+    </script>
+</body>
+
+</html>
