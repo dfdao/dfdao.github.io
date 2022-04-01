@@ -21,21 +21,24 @@
 
 <body>
     <div class="lobbies-container">
-
-        <div class="lobbies-top">
-            <div class="form">
-                <input type="text" name="name" autocomplete="off" required data-search>
-                <label for="name" class="label-name"> 
+        <div>
+            <div class="lobbies-top">
+                <div class="form">
+                    <input type="text" name="name" autocomplete="off" required data-search>
+                    <label for="name" class="label-name"> 
                     <span class="content-name">Name</span>
                 </label>
+                </div>
+            </div>
+            <div class="cards">
             </div>
         </div>
-        <div class="cards">
-        </div>
         <div class="details">
-            <div class="lobby-name">Only Velorums allowed</div>
-            <div class="lobby-address">0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803</div>
             <img class="lobby-map" src="images/random-map.png">
+            <div class="lobby-info">
+                <div class="lobby-name">Only Velorums allowed</div>
+                <div class="lobby-address">0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803</div>
+            </div>
             <table class="lobby-scoreboard">
                 <thead>
                     <th style="color:white;">Member</th>
@@ -159,7 +162,7 @@
       </div>
     </template>
     <script>
-        function readTextFile(file, callback) {
+        async function readTextFile(file, callback) {
             var rawFile = new XMLHttpRequest();
             rawFile.overrideMimeType("application/json");
             rawFile.open("GET", file, true);
@@ -180,7 +183,7 @@
         function numberWithCommas(x) {
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
-        searchInput.addEventListener("input", e => {
+        searchInput.addEventListener("input", async e => {
 
             const value = e.target.value.toLowerCase();
             users.forEach(user => {
@@ -203,6 +206,18 @@
                     name: user.name,
                     address: user.address,
                     element: card
+                }
+            })
+
+
+            let cardDetails = document.querySelector('.card-details');
+            let details = document.querySelector('.details');
+
+            cardDetails.addEventListener('click', () => {
+                if (getComputedStyle(details).display == 'none') {
+                    details.style.display = 'grid';
+                } else {
+                    details.style.display = 'none';
                 }
             })
         });

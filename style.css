@@ -72,7 +72,7 @@ body {
     font-weight: 400;
     color: var(--colorSecondary);
     display: flex;
-    align-items: top;
+    align-items: center;
     justify-content: center;
     min-height: 100%;
     padding: 0 24px;
