@@ -1,15 +1,15 @@
 [
-    { "name": "277DAO Community Round", "address": "0x06078143f81bafcb7b5df588bf2e8247dc8702be" },
-    { "name": "This and all the ones below are fake", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
-    { "name": "The Greatest Round Of All Time of the history", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
-    { "name": "2v2 Only Noobs", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
-    { "name": "The Art Of War", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
-    { "name": "Bulmenisaurus's game", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
-    { "name": ">1500 ELO only", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
-    { "name": "Historical scenario DFDAO vs Orden in R3", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
-    { "name": "Learning round", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
-    { "name": "1v1 no plugins allowed", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
-    { "name": "Don't enter here", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
-    { "name": "Only Corrupted biome", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
-    { "name": "if you are reading this you're a real one", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" }
+    { "id": 0, "name": "277DAO Community Round", "address": "0x06078143f81bafcb7b5df588bf2e8247dc8702be" },
+    { "id": 1, "name": "This and all the ones below are fake", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
+    { "id": 2, "name": "The Greatest Round Of All Time of the history", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
+    { "id": 3, "name": "2v2 Only Noobs", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
+    { "id": 4, "name": "The Art Of War", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
+    { "id": 5, "name": "Bulmenisaurus's game", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
+    { "id": 6, "name": ">1500 ELO only", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
+    { "id": 7, "name": "Historical scenario DFDAO vs Orden in R3", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
+    { "id": 8, "name": "Learning round", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
+    { "id": 9, "name": "1v1 no plugins allowed", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
+    { "id": 10, "name": "Don't enter here", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
+    { "id": 11, "name": "Only Corrupted biome", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" },
+    { "id": 12, "name": "if you are reading this you're a real one", "address": "0xd93C2AA349d1131BB2A6e1D3732FD41a059B5803" }
 ]
