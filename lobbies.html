@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lobbies.css">
+    <script type="text/javascript" src="scoreboard.js">
+        import lobbyScoreBoard from "./scoreboard.js";
+        let scoreboard = await lobbyScoreBoard();
+        console.log(scoreboard);
+    </script>
 </head>
 
 <body>
@@ -64,101 +69,6 @@
                             <td> Velorum</td>
                             <td>1</td>
                             <td>100,000,000,000,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>2</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>3</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>4</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>5</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>6</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>7</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>8</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>9</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>10</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>11</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>12</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>13</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>14</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>15</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>16</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>17</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>18</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>19</td>
-                            <td>1,000</td>
-                        </tr>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>20</td>
-                            <td>1,000</td>
                         </tr>
                     </tbody>
                 </thead>
@@ -210,6 +120,7 @@
                 const detailing = document.querySelector("[details-template]").content.cloneNode(true).children[0];
                 detailing.querySelector(".lobby-name").textContent = user_detail.name;
                 detailing.querySelector(".lobby-address").textContent = user_detail.address;
+
                 document.querySelector(".detail-boxes").append(detailing);
                 return {
                     id: user_detail.id,
