@@ -33,7 +33,7 @@
             <div class="cards">
             </div>
         </div>
-        <div class="details">
+        <div class="details" id="details">
             <img class="lobby-map" src="images/random-map.png">
             <div class="lobby-info">
                 <div class="lobby-name">Only Velorums allowed</div>
@@ -155,7 +155,7 @@
             <div class="card-name"></div>
             <div class="card-address"></div>
             <div class="card-buttons">
-            <a class="card-details">Details</a>
+            <a class="card-details" id="card-details">Details</a>
             <a class="card-join" target="_blank">Join</a>
             <a class="card-spectate" target="_blank">Spectate</a>
             <div>
@@ -184,12 +184,13 @@
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
         searchInput.addEventListener("input", async e => {
-
             const value = e.target.value.toLowerCase();
             users.forEach(user => {
                 const isVisible = user.name.toLowerCase().includes(value) || user.address.toLowerCase().includes(value);
                 user.element.classList.toggle("hide", !isVisible);
+
             })
+
         })
 
         readTextFile("./lobbies.json", function(json) {
@@ -208,17 +209,21 @@
                     element: card
                 }
             })
+        })
 
-
-            let cardDetails = document.querySelector('.card-details');
+        window.addEventListener('load', (event) => {
+            console.log('page is fully loaded');
+            let cardDetails = document.querySelectorAll('.card-details');
             let details = document.querySelector('.details');
-
-            cardDetails.addEventListener('click', () => {
-                if (getComputedStyle(details).display == 'none') {
-                    details.style.display = 'grid';
-                } else {
-                    details.style.display = 'none';
-                }
+            console.log()
+            cardDetails.forEach(x => {
+                x.addEventListener('click', () => {
+                    if (getComputedStyle(details).display == 'none') {
+                        details.style.display = 'grid';
+                    } else {
+                        details.style.display = 'none';
+                    }
+                })
             })
         });
     </script>

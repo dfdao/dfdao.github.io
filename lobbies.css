@@ -133,6 +133,7 @@
             text-align: center;
             border: 1px solid white;
             cursor: pointer;
+            user-select: none;
         }
         
         .details {
