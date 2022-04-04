@@ -26,3 +26,19 @@ export async function lobbyScoreBoard(address) {
     })
     return scoreboard
 }
+
+export async function lobbiesCreated() {
+
+
+    const rpcEndpoint = "https://rpc.xdaichain.com/";
+    const provider = new ethers.providers.JsonRpcProvider(rpcEndpoint);
+    const contract = new ethers.Contract("0x5da117b8ab8b739346f5edc166789e5afb1a7145", DarkForestABI, provider);
+    let lobbies = []
+    let eventsFilter = await contract.filters.LobbyCreated();
+    let events = await contract.queryFilter(eventsFilter);
+    console.log(events[0])
+    events.forEach((i) => {
+        lobbies.push({ "id": events.indexOf(i) + 2, "name": `game ${events.indexOf(i)} `, "address": i.args.lobbyAddress, "owner": i.args.ownerAddress })
+    })
+    return lobbies
+}

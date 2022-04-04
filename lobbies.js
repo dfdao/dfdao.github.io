@@ -1,5 +1,4 @@
-import { lobbyScoreBoard } from "./scoreboard.js"
-
+import { lobbyScoreBoard, lobbiesCreated } from "./scoreboard.js"
 
 let users = [];
 let users_details = [];
@@ -26,8 +25,12 @@ function numberWithCommas(x) {
 
 readTextFile("./lobbies.json", async function(json) {
     var data = JSON.parse(json);
+    let xyz = await lobbiesCreated()
 
-    users = await data.map(user => {
+    for (var i = 0; i < xyz.length; i++) {
+        data.push(xyz[i])
+    }
+    users = data.map(user => {
         const card = userCardTemplate.content.cloneNode(true).children[0];
         card.querySelector(".card-name").textContent = user.name;
         card.querySelector(".card-address").textContent = user.address;
@@ -43,7 +46,7 @@ readTextFile("./lobbies.json", async function(json) {
         }
     })
 
-    users_details = await data.map(user_detail => {
+    users_details = data.map(user_detail => {
         const detailing = document.querySelector("[details-template]").content.cloneNode(true).children[0];
         detailing.querySelector(".lobby-name").textContent = user_detail.name;
         detailing.querySelector(".lobby-address").textContent = user_detail.address;
