@@ -1,4 +1,4 @@
-import { ethers } from 'ethers';
+import { ethers } from 'https://cdn.skypack.dev/ethers';
 import DarkForestABI from './abi.js';
 
 
@@ -25,6 +25,3 @@ export async function lobbyScoreBoard() {
     })
     return scoreboard
 }
-
-let scoreboard = await lobbyScoreBoard()
-console.log(scoreboard)

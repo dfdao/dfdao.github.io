@@ -17,11 +17,6 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lobbies.css">
-    <script type="text/javascript" src="scoreboard.js">
-        import lobbyScoreBoard from "./scoreboard.js";
-        let scoreboard = await lobbyScoreBoard();
-        console.log(scoreboard);
-    </script>
 </head>
 
 <body>
@@ -41,6 +36,7 @@
         <div class="detail-boxes">
         </div>
     </div>
+
     <template data-user-template>
         <div class="cardbox">
             <div class="card-name"></div>
@@ -52,115 +48,29 @@
             <div>
       </div>
     </template>
+
     <template details-template>
+        <div class="details-box">
         <div class="details">
-        <img class="lobby-map" src="images/random-map.png">
+            <img class="lobby-map" src="images/random-map.png">
             <div class="lobby-info">
                 <div class="lobby-name"></div>
                 <div class="lobby-address"></div>
             </div>
             <table class="lobby-scoreboard">
                 <thead>
-                    <th style="color:white;">Member</th>
                     <th style="color:white;">Rank</th>
+                    <th style="color:white;">Address</th>
                     <th style="color:white;">Score </th>
-                    <tbody>
-                        <tr>
-                            <td> Velorum</td>
-                            <td>1</td>
-                            <td>100,000,000,000,000</td>
-                        </tr>
+                    <tbody class="lobby-tbody">
                     </tbody>
                 </thead>
             </table>
         </div>
+    </div>
     </template>
+    <script type="module" src="./lobbies.js"></script>
     <script>
-        let users = [];
-        let users_details = [];
-
-        async function readTextFile(file, callback) {
-            var rawFile = new XMLHttpRequest();
-            rawFile.overrideMimeType("application/json");
-            rawFile.open("GET", file, true);
-            rawFile.onreadystatechange = function() {
-                if (rawFile.readyState === 4 && rawFile.status == "200") {
-                    callback(rawFile.responseText);
-                }
-            }
-            rawFile.send(null);
-        }
-
-
-        const searchInput = document.querySelector("[data-search]");
-        const userCardTemplate = document.querySelector("[data-user-template]")
-
-
-
-        readTextFile("./lobbies.json", function(json) {
-            var data = JSON.parse(json);
-
-            users = data.map(user => {
-                const card = userCardTemplate.content.cloneNode(true).children[0];
-                card.querySelector(".card-name").textContent = user.name;
-                card.querySelector(".card-address").textContent = user.address;
-                card.querySelector(".card-join").href = `https://zkga.me/play/${user.address}`;
-                card.querySelector(".card-spectate").href = `https://wonderful-druid-5c3a7e.netlify.app/play/${user.address}`;
-                card.querySelector(".card-details").id = user.id;
-                document.querySelector(".cards").append(card);
-                return {
-                    id: user.id,
-                    name: user.name,
-                    address: user.address,
-                    element: card
-                }
-            })
-
-            users_details = data.map(user_detail => {
-                const detailing = document.querySelector("[details-template]").content.cloneNode(true).children[0];
-                detailing.querySelector(".lobby-name").textContent = user_detail.name;
-                detailing.querySelector(".lobby-address").textContent = user_detail.address;
-
-                document.querySelector(".detail-boxes").append(detailing);
-                return {
-                    id: user_detail.id,
-                    name: user_detail.name,
-                    address: user_detail.address,
-                    element: detailing
-                }
-
-            })
-        })
-
-        searchInput.addEventListener("input", async e => {
-            const value = e.target.value.toLowerCase();
-            users.forEach(user => {
-                const isVisible = user.name.toLowerCase().includes(value) || user.address.toLowerCase().includes(value);
-                user.element.classList.toggle("hide", !isVisible);
-
-            })
-
-        })
-
-        window.addEventListener('load', (event) => {
-            console.log('page is fully loaded');
-            let cardDetails = document.querySelectorAll('.card-details');
-            let details = document.querySelectorAll('.details');
-
-            details.forEach(y => {
-                y.classList.toggle("hide")
-            })
-
-            cardDetails.forEach(x => {
-                x.addEventListener('click', () => {
-                    const value = x.id
-                    users_details.forEach(a => {
-                        const isVisible = a.id == value;
-                        a.element.classList.toggle('hide', !isVisible);
-                    })
-                })
-            })
-        });
     </script>
 </body>
 

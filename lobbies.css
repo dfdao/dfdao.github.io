@@ -136,11 +136,16 @@
             user-select: none;
         }
         
+        .details-box {
+            position: sticky;
+            top: 100px;
+            display: block;
+        }
+        
         .details {
             position: sticky;
             height: 800px;
             width: 600px;
-            top: 100px;
             padding: 16px;
             display: grid;
             grid-template: "a b" "c c";
