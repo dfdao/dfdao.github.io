@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@d_fdao" />
+    <meta name="twitter:title" content="join dfdao" />
+    <meta property="twitter:url" content="http://dfdao.xyz/">
+    <meta name="twitter:description" content="💫 Discord Link 💫" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/dfdao/dfdao.github.io/main/dfdao_banner_discord.png" />
+    <script async defer data-domain="dfdao.xyz" src="https://plausible.one/js/plausible.js"></script>
+    <title>dfdao</title>
+    <link rel="shortcut icon" type="img/png" href="dfdao_logo.png" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lobbies.css">
+</head>
+
+<body>
+    <div class="lobbies-container">
+        <div>
+            <div class="lobbies-top">
+                <div class="form">
+                    <input type="text" name="name" autocomplete="off" required data-search>
+                    <label for="name" class="label-name"> 
+                    <span class="content-name">Name</span>
+                </label>
+                </div>
+            </div>
+            <div class="cards">
+            </div>
+        </div>
+        <div class="detail-boxes">
+        </div>
+    </div>
+
+    <template data-user-template>
+        <div class="cardbox">
+            <div class="card-name"></div>
+            <div class="card-address"></div>
+            <div class="card-buttons">
+            <a class="card-details" id="card-details">Details</a>
+            <a class="card-join" target="_blank">Join</a>
+            <a class="card-spectate" target="_blank">Spectate</a>
+            <div>
+      </div>
+    </template>
+
+    <template details-template>
+        <div class="details-box">
+        <div class="details">
+            <img class="lobby-map" src="images/random-map.png">
+            <div class="lobby-info">
+                <div class="lobby-name"></div>
+                <div class="lobby-address"></div>
+                <div class="lobby-owner"></div>
+            </div>
+            <table class="lobby-scoreboard">
+                <thead>
+                    <th style="color:white;">Rank</th>
+                    <th style="color:white;">Address</th>
+                    <th style="color:white;">Score </th>
+                    <tbody class="lobby-tbody">
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+    </template>
+    <script type="module" src="./lobbies.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

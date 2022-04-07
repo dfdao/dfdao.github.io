@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@darkforest_eth/contracts": "^6.7.19",
     "@darkforest_eth/types": "^6.1.25"
   },
   "type": "module"

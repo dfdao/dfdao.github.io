@@ -1,0 +1,220 @@
+        body {
+            content: "";
+        }
+        
+        .lobbies-container {
+            padding: 47px 12.46%;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            display: grid;
+        }
+        
+        .lobbies-top {
+            padding-bottom: 10px;
+            max-width: 550px;
+        }
+        
+        .form {
+            width: 100%;
+            position: relative;
+            height: 50px;
+            overflow: hidden;
+        }
+        
+        .form input {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            padding-top: 10px;
+            border: none;
+            color: rgb(255, 255, 255, 0.5);
+            outline: none;
+        }
+        
+        .form label {
+            position: absolute;
+            bottom: 0px;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .form label::after {
+            content: "";
+            position: absolute;
+            left: -1px;
+            bottom: -1px;
+            height: 100%;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+            transform: translateX(-100%);
+            transition: all 0.3s ease;
+        }
+        
+        .content-name {
+            position: absolute;
+            bottom: 5px;
+            left: 0px;
+            transition: all 0.3s ease;
+        }
+        
+        .form input:focus+.label-name .content-name,
+        .form input:valid+.label-name .content-name {
+            transform: translateY(-100%);
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            ;
+        }
+        
+        .form input:focus+.label-name::after,
+        .form input:valid+.label-name::after {
+            transform: translateX(0%)
+        }
+        
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            max-width: 550px;
+        }
+        
+        .cardbox {
+            width: 550px;
+            min-height: 125px;
+            background-color: rgba(255, 255, 255, 0.05);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 1px;
+            padding: 16px;
+        }
+        
+        .card-name {
+            font-size: 16px;
+            color: green;
+        }
+        
+        .card-address {
+            font-size: 12px;
+        }
+        
+        .card-buttons {
+            display: flex;
+            gap: 0.5em;
+        }
+        
+        .card-join {
+            font-size: 12px;
+            color: white;
+            padding: 5px;
+            margin-top: auto;
+            text-align: center;
+            border: 1px solid white;
+        }
+        
+        .card-spectate {
+            font-size: 12px;
+            color: white;
+            width: 75px;
+            padding: 5px;
+            margin-top: auto;
+            text-align: center;
+            border: 1px solid white;
+        }
+        
+        .card-details {
+            font-size: 12px;
+            color: white;
+            grid-area: 3/2;
+            width: 75px;
+            padding: 5px;
+            margin-top: auto;
+            text-align: center;
+            border: 1px solid white;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .details-box {
+            position: sticky;
+            top: 100px;
+            display: block;
+        }
+        
+        .details {
+            position: sticky;
+            height: 800px;
+            width: 600px;
+            padding: 16px;
+            display: grid;
+            grid-template: "a b" "c c";
+            background-color: rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+        }
+        
+        .lobby-info {
+            grid-area: b;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .lobby-name {
+            font-size: 16px;
+            display: inline-block;
+            text-align: left;
+            word-break: break-word;
+            padding-top: 16px;
+            max-height: 800px;
+        }
+        
+        .lobby-address {
+            padding-top: 16px;
+            font-size: 12px;
+        }
+        
+        .lobby-owner {
+            padding-top: 16px;
+            font-size: 12px;
+        }
+        
+        .lobby-map {
+            grid-area: a;
+            max-width: 200px;
+            max-height: 200px;
+            padding-bottom: 32px;
+            padding: 8px;
+        }
+        
+        .lobby-scoreboard {
+            grid-area: c;
+            width: 500px;
+            margin: auto;
+            display: block;
+            height: 450px;
+            overflow-y: auto;
+        }
+        
+        .lobby-scoreboard th {
+            text-align: center;
+            width: 400px;
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .lobby-scoreboard td {
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px;
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        .loading-center {
+            padding: 100px;
+            border: 1px solid rgba(255, 255, 255);
+        }
