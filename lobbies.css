@@ -169,6 +169,12 @@
         }
         
         .lobby-address {
+            padding-top: 16px;
+            font-size: 12px;
+        }
+        
+        .lobby-owner {
+            padding-top: 16px;
             font-size: 12px;
         }
         
@@ -189,13 +195,26 @@
             overflow-y: auto;
         }
         
-        .lobby-scoreboard td {
+        .lobby-scoreboard th {
             text-align: center;
             width: 400px;
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .lobby-scoreboard td {
+            text-align: center;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding: 10px;
         }
         
         .hide {
             display: none;
+        }
+        
+        .loading-center {
+            padding: 100px;
+            border: 1px solid rgba(255, 255, 255);
         }

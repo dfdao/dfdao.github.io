@@ -49,7 +49,8 @@ readTextFile("./lobbies.json", async function(json) {
     users_details = data.map(user_detail => {
         const detailing = document.querySelector("[details-template]").content.cloneNode(true).children[0];
         detailing.querySelector(".lobby-name").textContent = user_detail.name;
-        detailing.querySelector(".lobby-address").textContent = user_detail.address;
+        detailing.querySelector(".lobby-address").textContent = `Lobby: ${user_detail.address}`;
+        detailing.querySelector(".lobby-owner").textContent = `Owner: ${user_detail.owner}`;
         detailing.querySelector(".details").id = user_detail.id;
         detailing.querySelector(".lobby-tbody").id = user_detail.id;
         document.querySelector(".detail-boxes").append(detailing);
@@ -76,8 +77,8 @@ readTextFile("./lobbies.json", async function(json) {
         tableClass.innerHTML = ""
         for (var i = 0; i < data.length; i++) {
             var row = `<tr>
-                <td>${i}</td>
-                <td data-label="Member" style="font-size: 12px">${data[i].address}</td>
+                <td>${i + 1}</td>
+                <td data-label="Member" style="font-size: 11px">${data[i].address}</td>
                 <td data-label="Score">${numberWithCommas(data[i].score)}</td>
           </tr>`
             tableClass.innerHTML += row
@@ -107,7 +108,7 @@ readTextFile("./lobbies.json", async function(json) {
                 if (a.id == value) {
                     console.log(a.element.querySelector('.lobby-name'))
 
-                    a.element.querySelector(".lobby-tbody").innerHTML = "Loading"
+                    a.element.querySelector(".lobby-tbody").innerHTML = `<tr><td>Loading...</td><td>Loading...</td><td>Loading...<td><tr>`
                     buildTable(await lobbyScoreBoard(a.address), a.element.querySelector('.lobby-tbody'));
 
                 }
