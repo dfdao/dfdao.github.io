@@ -7,6 +7,7 @@
             width: 100%;
             grid-template-columns: 1fr 1fr;
             display: grid;
+            gap: 0.5em;
         }
         
         .lobbies-top {
@@ -99,6 +100,10 @@
             font-size: 12px;
         }
         
+        .card-owner {
+            font-size: 11px;
+        }
+        
         .card-buttons {
             display: flex;
             gap: 0.5em;
@@ -144,9 +149,9 @@
         
         .details {
             position: sticky;
-            height: 800px;
-            width: 600px;
             padding: 16px;
+            max-width: 600px;
+            margin: auto;
             display: grid;
             grid-template: "a b" "c c";
             background-color: rgba(255, 255, 255, 0.05);
