@@ -30,12 +30,15 @@ readTextFile("./lobbies.json", async function(json) {
     for (var i = 0; i < xyz.length; i++) {
         data.push(xyz[i])
     }
+
+
     users = data.map(user => {
         const card = userCardTemplate.content.cloneNode(true).children[0];
         card.querySelector(".card-name").textContent = user.name;
-        card.querySelector(".card-address").textContent = user.address;
+        card.querySelector(".card-address").textContent = `Lobby: ${user.address}`;
         card.querySelector(".card-join").href = `https://zkga.me/play/${user.address}`;
         card.querySelector(".card-spectate").href = `https://wonderful-druid-5c3a7e.netlify.app/play/${user.address}`;
+        card.querySelector(".card-owner").textContent = `Owner: ${user.owner}`;
         card.querySelector(".card-details").id = user.id;
         document.querySelector(".cards").append(card);
         return {
