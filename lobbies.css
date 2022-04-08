@@ -192,6 +192,7 @@
         }
         
         .lobby-scoreboard {
+            padding-top: 16px;
             grid-area: c;
             width: 500px;
             margin: auto;
